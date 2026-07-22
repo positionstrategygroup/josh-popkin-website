@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Josh Popkin — Marketing Engineer, Cornell MBA, Founder</title>
 <meta name="description" content="Josh Popkin is a marketing engineer, Cornell MBA, Bucknell alumnus, 2x founder, author of Play Offense, digital musician — and an underdog. This is his comeback story.">
+<meta name="google-site-verification" content="IyA8PZsoIr66GBMNOSdjPAMRs47xbgK_91oU2Pxg3u4">
 <meta property="og:title" content="Josh Popkin — Underdog">
 <meta property="og:description" content="You've never read a comeback story like this.">
 <meta property="og:type" content="website">
@@ -199,7 +200,13 @@ nav a{transition:opacity .2s ease}
   height:1em;overflow:hidden;position:relative;
 }
 .yr-roll{transition:transform .5s cubic-bezier(.65,0,.35,1)}
-.yr-roll>div{height:1em;line-height:1}
+.yr-roll>div{height:1em;line-height:1;display:flex;align-items:center}
+.year .txt{font-size:.5em;letter-spacing:.08em}
+.yr-range{
+  font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--fg-2);
+  height:15px;margin-top:8px;
+}
+.chapter p+p{margin-top:1.1em}
 
 .chapters{padding-left:clamp(120px,26vw,360px)}
 .chapter{
@@ -359,7 +366,7 @@ footer a:hover{color:var(--red)}
 <section class="rewind" id="rewind" data-mode="night">
   <h2 class="rv">You've never read a comeback story <em>like this.</em></h2>
   <div class="clock rv d2">
-    <span class="mono">Let's rewind the clock</span>
+    <span class="mono">Let's rewind</span>
   </div>
 </section>
 
@@ -369,14 +376,15 @@ footer a:hover{color:var(--red)}
     <div class="rail-inner">
       <span class="mono">Chapter</span>
       <div class="year" id="year"></div>
+      <div class="yr-range" id="yrRange"></div>
     </div>
   </aside>
 
   <div class="chapters">
 
     <section class="chapter" id="y1996" data-year="1996" data-mode="night">
-      <span class="mono">The middle child</span>
-      <p>Josh was born the middle child in Westport, Connecticut.</p>
+      <span class="mono">The beginning</span>
+      <p>Josh was born in Westport, Connecticut.</p>
       <figure class="fig rv">
         <div class="fig-frame sq">
           <img src="assets/josh-dog.jpg" alt="Josh Popkin holding his dog" onerror="this.parentElement.classList.add('no-img')">
@@ -384,79 +392,58 @@ footer a:hover{color:var(--red)}
             <svg viewBox="0 0 120 70"><circle cx="60" cy="34" r="17"/><path d="M47 22l5-12 8 7zM73 22l-5-12-8 7z"/></svg>
           </div>
         </div>
-        <figcaption>The middle child, years later — holding the O from underdog</figcaption>
+        <figcaption>Years later — holding the O from underdog</figcaption>
       </figure>
     </section>
 
-    <section class="chapter" data-year="2011" data-mode="night">
-      <span class="mono">First laugh</span>
-      <p>After getting sick and undergoing surgery, Josh fell in love with stand-up comedy.</p>
-    </section>
-
     <section class="chapter" data-year="2013" data-mode="night">
-      <span class="mono">First stage</span>
-      <p>Josh performed his first stand-up comedy show to a <strong>sold-out crowd</strong> at Toquet Hall in Westport, Connecticut.</p>
+      <span class="mono">Finding my voice</span>
+      <p>After surgery kept him away from sports, Josh discovered stand-up comedy.</p>
+      <p>He performed his first <strong>sold-out</strong> comedy show while still in high school.</p>
     </section>
 
-    <section class="chapter" data-year="2014" data-mode="night">
-      <span class="mono">The 'Nell Party</span>
-      <p>Josh attends Bucknell University, enrolls in the business school to study Markets, Innovation &amp; Design — and starts the first-ever stand-up comedy club on campus: <em>The 'Nell Party.</em></p>
-    </section>
-
-    <section class="chapter" data-year="2015" data-mode="night">
-      <span class="mono">Sold out</span>
-      <p>The 'Nell Party sells out Trout Auditorium — a sold-out show performed to <strong>a quarter of the entire student body.</strong></p>
-    </section>
-
-    <section class="chapter" data-year="2018" data-mode="night">
-      <span class="mono">Going digital</span>
-      <p>Josh begins posting videos on TikTok and pursues a career in comedy.</p>
-    </section>
-
-    <section class="chapter" data-year="2019" data-mode="night">
-      <span class="mono">Viral</span>
-      <p>Josh goes viral on TikTok and gains over <strong>3,500,000 followers.</strong></p>
+    <section class="chapter" data-year="2014" data-until="2019" data-mode="night">
+      <span class="mono">Chasing bigger stages</span>
+      <p>At Bucknell University, Josh founded the school's first stand-up comedy club before taking comedy online.</p>
+      <p>By 2019, his videos had reached millions of people, growing an audience of more than <strong>3.5 million followers.</strong></p>
     </section>
 
     <section class="chapter dark-peak" data-year="2020" data-mode="night">
       <span class="mono">The fall</span>
-      <p>Josh struggles with his mental health and puts out videos he now disagrees with — and is cancelled for spilling a bucket of cereal on the New York City subway.</p>
+      <p>Success came faster than maturity.</p>
+      <p>Josh struggled with his mental health, made decisions he no longer stands behind, and became the subject of widespread online criticism.</p>
+      <p>It became <em>the defining chapter</em> of his public reputation.</p>
     </section>
 
-    <section class="chapter" data-year="2020" data-mode="night">
-      <span class="mono">Carter-Agency</span>
-      <p>Josh and his brother co-found <strong>Carter-Agency</strong> — named after some of their biggest role models: Maverick Carter, Dwayne Carter and Sean Carter. The goal was simple: like Maverick, be the best friend of superstars and help them monetize.</p>
-    </section>
-
-    <section class="chapter" data-year="2021" data-mode="night">
-      <span class="mono">Bootstrapped</span>
-      <p>Carter-Agency bootstraps from no sales and no investment to working with <strong>the biggest brands in the world.</strong></p>
-    </section>
-
-    <section class="chapter" data-year="2023" data-mode="night">
-      <span class="mono">Second venture</span>
-      <p>Josh founds <strong>Malibu Marketing Group</strong>, a separate agency helping advertisers find influencers for their projects.</p>
-    </section>
-
-    <section class="chapter" data-year="2024" data-mode="night">
-      <span class="mono">The press run</span>
-      <p>A disagreement with a couple of creators leads to a press run — lies that were later proven false. One accusation claimed the agency misappropriated funds meant for Black creators; the agency published its roster of over 100 creators from all walks of life, and the claim was disproven.</p>
+    <section class="chapter" data-year="2020" data-until="2023" data-mode="night">
+      <span class="mono">Building</span>
+      <p>Josh co-founded <strong>Carter Agency</strong>, helping creators build partnerships with some of the world's largest brands.</p>
+      <p>The company grew from zero customers into a successful business without outside investment.</p>
     </section>
 
     <section class="chapter dark-peak" id="y2024b" data-year="2024" data-mode="night">
-      <span class="mono">The darkest chapter</span>
-      <p>Josh shuts down both companies and steps away from work to focus solely on his mental health. As he actively worked to change who he was in real life, the people around him kept their distance — because of an internet reputation that no longer matched the person.</p>
+      <span class="mono">Rock bottom</span>
+      <p>The businesses came to an end.</p>
+      <p>Josh stepped away from work to focus on rebuilding something more important than a company: himself.</p>
     </section>
 
     <section class="chapter" id="y2025" data-year="2025" data-mode="day">
-      <span class="mono">The turn</span>
-      <p>Josh receives an MBA from <strong>Cornell Tech</strong> — and becomes fascinated with a new craft: <em>marketing engineering.</em></p>
+      <span class="mono">A new craft</span>
+      <p>Josh earned his MBA from <strong>Cornell Tech.</strong></p>
+      <p>While there, he became fascinated by the intersection of marketing, technology and AI — leading him to specialize in <em>Marketing Engineering.</em></p>
     </section>
 
     <section class="chapter" id="y2026" data-year="2026" data-mode="day">
-      <span class="mono">Work for free</span>
-      <p>Josh moves to the East Village and lands on an idea that changes the trajectory of his life: <strong>work for free.</strong> He walks into his favorite small businesses and offers to completely rebrand, reposition and rebuild their websites — for no financial compensation. In exchange, he asks for one thing: positive praise online.</p>
-      <p class="aside">Josh knows firsthand how painful it is when your in-person reality doesn't match your online perception. So he improves the online presence of the stores he loves — and one by one, storefront by storefront, they help him rebuild his.</p>
+      <span class="mono">Starting over</span>
+      <p>Josh moved to New York City with a simple goal: build a reputation that reflected the person he had become.</p>
+      <p>He began redesigning websites and rebuilding online brands for local businesses — <strong>for free.</strong></p>
+      <p class="aside">In return, he asked only for an honest testimonial if they believed the work deserved one. The project continues today, one business at a time.</p>
+    </section>
+
+    <section class="chapter" id="today" data-year="TODAY" data-mode="day">
+      <span class="mono">Today</span>
+      <p>This website isn't about rewriting the past.</p>
+      <p>It's about documenting <em>what comes next.</em></p>
     </section>
 
   </div>
@@ -464,8 +451,8 @@ footer a:hover{color:var(--red)}
 
 <!-- ============ CTA ============ -->
 <section class="cta" id="inquire" data-mode="day">
-  <h2 class="rv">Want to become part of <em>this story?</em></h2>
-  <p class="sub rv d1">Reach out and inquire about Josh repositioning your site — for no financial compensation.</p>
+  <h2 class="rv">Become part of <em>the story.</em></h2>
+  <p class="sub rv d1">If you own a small business with a great product but a website that doesn't reflect it, Josh may redesign it free of charge.</p>
   <a class="btn rv d2" href="mailto:jpp234@cornell.edu?subject=Reposition%20my%20site">Inquire — it's free
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
   </a>
@@ -658,19 +645,24 @@ footer a:hover{color:var(--red)}
 
   /* ---------- YEAR ODOMETER ---------- */
   var yearEl = document.getElementById('year');
+  var rangeEl = document.getElementById('yrRange');
   var currentYear = '';
-  function setYear(y){
+  function row(y){
+    return /^\d+$/.test(y) ? y : '<span class="txt">' + y + '</span>';
+  }
+  function setYear(y, until){
+    rangeEl.textContent = until ? '— ' + until : '';
     if (y === currentYear) return;
     var prev = currentYear;
     currentYear = y;
     if (!prev || reduced){
-      yearEl.innerHTML = '<div class="yr-roll"><div>' + y + '</div></div>';
+      yearEl.innerHTML = '<div class="yr-roll"><div>' + row(y) + '</div></div>';
       return;
     }
-    var goingBack = parseInt(y, 10) < parseInt(prev, 10);
+    var goingBack = (parseInt(y, 10) || 9999) < (parseInt(prev, 10) || 9999);
     var first = goingBack ? y : prev;
     var second = goingBack ? prev : y;
-    yearEl.innerHTML = '<div class="yr-roll" style="transition:none;transform:translateY(' + (goingBack ? '-1em' : '0') + ')"><div>' + first + '</div><div>' + second + '</div></div>';
+    yearEl.innerHTML = '<div class="yr-roll" style="transition:none;transform:translateY(' + (goingBack ? '-1em' : '0') + ')"><div>' + row(first) + '</div><div>' + row(second) + '</div></div>';
     var roll = yearEl.firstChild;
     requestAnimationFrame(function(){ requestAnimationFrame(function(){
       roll.style.transition = '';
@@ -719,7 +711,7 @@ footer a:hover{color:var(--red)}
     var railOn = tRect.top < mid && tRect.bottom > mid;
     rail.style.opacity = railOn ? 1 : 0;
     rail.style.transition = 'opacity .5s ease';
-    if (railOn && active) setYear(active.getAttribute('data-year'));
+    if (railOn && active) setYear(active.getAttribute('data-year'), active.getAttribute('data-until'));
 
     // theme: nearest themed element to viewport center decides night/day
     var mode = 'day', mBest = Infinity;
