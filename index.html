@@ -220,6 +220,8 @@ nav a{transition:opacity .2s ease}
   transition:border-color var(--theme-fade),background var(--theme-fade);
 }
 .fig-frame img{width:100%;aspect-ratio:3/2;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.fig-frame.sq img{aspect-ratio:1/1}
+.chapter .fig{max-width:420px}
 .fig-frame.no-img img{display:none}
 .fig-frame.no-img .fig-ph{
   aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;
@@ -376,13 +378,13 @@ footer a:hover{color:var(--red)}
       <span class="mono">The middle child</span>
       <p>Josh was born the middle child in Westport, Connecticut.</p>
       <figure class="fig rv">
-        <div class="fig-frame no-img" id="threedogs">
-          <img src="assets/three-dogs.jpg" alt="Three dogs — Josh is the one who looks a little different" onerror="this.parentElement.classList.add('no-img')" onload="this.parentElement.classList.remove('no-img')">
+        <div class="fig-frame sq">
+          <img src="assets/josh-dog.jpg" alt="Josh Popkin holding his dog" onerror="this.parentElement.classList.add('no-img')">
           <div class="fig-ph" aria-hidden="true">
-            <svg viewBox="0 0 120 70"><circle cx="25" cy="38" r="14"/><circle cx="60" cy="34" r="17"/><circle cx="95" cy="38" r="14"/><path d="M14 28l4-10 7 6zM32 28l-4-10-7 6zM47 22l5-12 8 7zM73 22l-5-12-8 7zM84 28l4-10 7 6zM102 28l-4-10-7 6z"/></svg>
+            <svg viewBox="0 0 120 70"><circle cx="60" cy="34" r="17"/><path d="M47 22l5-12 8 7zM73 22l-5-12-8 7z"/></svg>
           </div>
         </div>
-        <figcaption>The one who looked a little different than everyone else</figcaption>
+        <figcaption>The middle child, years later — holding the O from underdog</figcaption>
       </figure>
     </section>
 

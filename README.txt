@@ -1,15 +1,17 @@
 JOSH POPKIN — PERSONAL SITE
 ===========================
 
-Everything is one file: index.html (no build step, deploys anywhere — Cloudflare Pages ready).
+Live: https://positionstrategygroup.github.io/josh-popkin-website/
+Repo: https://github.com/positionstrategygroup/josh-popkin-website
 
-TWO PHOTOS TO ADD (drop them in the assets/ folder, exact filenames):
+Everything is one file: index.html (no build step). GitHub Pages deploys the
+main branch — commit + push and it's live in about a minute.
 
-  assets/dog.jpg        → becomes the "O" in UNDERDOG in the hero
-  assets/three-dogs.jpg → the 1996 "middle child" photo in the timeline
+PHOTOS (in assets/):
+  dog.jpg      → the dog's face, used as the "O" in UNDERDOG in the hero
+  josh-dog.jpg → Josh holding the dog, shown in the 1996 chapter (rendered b&w)
 
-Until the files exist, elegant dog-silhouette placeholders show automatically.
-No code changes needed — just drop the files in and refresh.
+To swap either photo, just replace the file (same name) and push.
 
 DEV NOTE: append ?theme=night or ?theme=day to the URL to pin the color
-theme for design QA (normal scroll-driven theme switching is disabled while pinned).
+theme for design QA (scroll-driven theme switching is disabled while pinned).
