@@ -1,12 +1,13 @@
 /* Josh Popkin — Insights (WFH structure, monochrome) */
 :root {
-  --ink: #0a0a0a;
-  --ink-soft: #333333;
-  --stone: #6b6b6b;
-  --paper: #ffffff;
-  --line: rgba(10, 10, 10, 0.12);
-  --font-display: "EB Garamond", "Times New Roman", serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ink: #f2f2f2;
+  --ink-soft: #c9c9c9;
+  --stone: #8c8c8c;
+  --paper: #000000;
+  --line: rgba(255, 255, 255, 0.14);
+  --font-display: "Times New Roman", Times, serif;
+  --font-body: "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
   --container: 1400px;
   --gutter: clamp(24px, 5vw, 72px);
   --section-pad: clamp(72px, 10vw, 160px);
@@ -24,7 +25,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 h2 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
 
 .eyebrow {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -44,6 +45,7 @@ h2 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
 .wordmark { font-family: var(--font-display); font-size: 1.25rem; color: #fff; letter-spacing: 0.02em; }
 .site-nav { display: flex; align-items: center; gap: 40px; }
 .site-nav a {
+  font-family: var(--font-mono);
   font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
   font-weight: 500; color: #fff; position: relative;
 }
@@ -88,7 +90,7 @@ h2 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
 .insights__head { max-width: 62ch; margin-bottom: 56px; }
 .insights__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .insight-card { display: flex; flex-direction: column; color: inherit; }
-.insight-card__media { aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; margin-bottom: 22px; background: #eee; }
+.insight-card__media { aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; margin-bottom: 22px; background: #111; border: 1px solid var(--line); }
 .insight-card__media img {
   width: 100%; height: 100%;
   object-fit: cover; object-position: center 25%;
@@ -97,7 +99,7 @@ h2 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
 }
 .insight-card:hover .insight-card__media img { transform: scale(1.05); }
 .insight-card__meta {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--stone); font-weight: 600; margin-bottom: 10px;
 }
@@ -105,7 +107,7 @@ h2 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
 .insight-card p { color: var(--ink-soft); font-size: 0.98rem; max-width: 42ch; }
 .insight-card__link {
   margin-top: 16px;
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
   font-weight: 600; color: var(--ink);
   border-bottom: 1px solid transparent;
@@ -128,14 +130,14 @@ h2 { font-size: clamp(2.2rem, 4.2vw, 3.6rem); }
 .article-body blockquote {
   font-family: var(--font-display);
   font-size: 1.25rem; font-style: italic; line-height: 1.5;
-  border-left: 2px solid var(--ink);
+  border-left: 2px solid #fff;
   padding-left: 24px; margin: 32px 0;
   color: var(--ink);
 }
 .article-body strong { color: var(--ink); }
 
 /* Footer */
-.site-footer { background: #000; color: #fff; padding: 56px var(--gutter); }
+.site-footer { background: #000; color: #fff; padding: 56px var(--gutter); border-top: 1px solid var(--line); }
 .site-footer__inner {
   max-width: var(--container); margin: 0 auto;
   display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;

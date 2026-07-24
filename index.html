@@ -12,26 +12,483 @@
 <meta property="og:type" content="profile">
 <link rel="canonical" href="https://joshpopkin.com/">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{height:100%}
-body{
-  background:#FFFFFF;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:28px;
+:root{
+  --paper:#ffffff; --void:#000000; --ink:#0a0a0a; --ghost:#8c8c8c; --line:rgba(255,255,255,.14);
+  --folder-hi:#6FBBF7; --folder-lo:#3F8FE0; --accent:#4A9DE8;
+  --serif:"Times New Roman",Times,serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
 }
-a.photo{display:block;transition:opacity .25s ease}
-a.photo:hover{opacity:.85}
-img{width:min(300px,72vw);height:auto;display:block}
-h1{
-  font-family:"Times New Roman",Times,serif;
-  font-weight:400;font-size:clamp(17px,2.4vw,22px);
-  color:#000;letter-spacing:.01em;text-align:center;
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--void)}
+body{font-family:var(--serif);color:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:12px;z-index:300;background:#000;color:#fff;padding:10px 16px;font:13px var(--mono);transform:translateY(-200%);transition:transform .2s}
+.skip:focus{transform:none}
+
+/* ============ ACT 1 — the desktop ============ */
+#desktop{
+  position:fixed;inset:0;z-index:100;background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .5s ease;
+}
+#desktop.gone{opacity:0;pointer-events:none}
+.folder-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+.folder{position:relative;width:118px;height:92px;cursor:pointer;transition:transform .18s ease;outline-offset:8px}
+.folder:active{transform:scale(.96)}
+.folder svg{width:100%;height:100%;display:block;filter:drop-shadow(0 4px 10px rgba(63,143,224,.25))}
+.folder-label{
+  font:14px/1.5 var(--mono);letter-spacing:.02em;color:var(--ink);
+  padding:2px 8px;border-radius:4px;text-align:center;
+}
+.folder-wrap.selected .folder-label{background:#3F8FE0;color:#fff}
+.hint{
+  font:11px var(--mono);color:#b3b3b3;letter-spacing:.08em;text-transform:uppercase;
+  opacity:0;transition:opacity 1.2s ease;margin-top:26px;
+}
+.hint.show{opacity:1}
+
+/* ============ ACT 2 — the wormhole ============ */
+#warp{position:fixed;inset:0;z-index:150;display:none}
+
+/* ============ ACT 3 — the universe ============ */
+#universe{opacity:0;transition:opacity .9s ease}
+#universe.on{opacity:1}
+.uni-header{
+  position:relative;height:min(62vh,560px);min-height:380px;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.uni-header img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;
+  filter:grayscale(1) contrast(1.05);
+}
+.uni-header::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.15) 40%,#000 96%),
+             linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 55%);
+}
+.uni-head-content{position:relative;z-index:2;padding:0 clamp(24px,5vw,64px) clamp(28px,5vh,48px);max-width:1280px;margin:0 auto;width:100%}
+.verified{font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#cfcfcf;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verified .dot{width:16px;height:16px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.verified .dot svg{width:9px;height:9px}
+.uni-name{font-weight:400;font-size:clamp(52px,10vw,118px);line-height:.95;letter-spacing:-.02em}
+.uni-meta{font:13px var(--mono);color:#bdbdbd;margin-top:16px;letter-spacing:.04em}
+.uni-actions{margin-top:22px;display:flex;align-items:center;gap:18px}
+.bigplay{
+  width:56px;height:56px;border-radius:50%;background:#fff;color:#000;
+  display:flex;align-items:center;justify-content:center;flex:none;
+  transition:transform .15s ease;
+}
+.bigplay:hover{transform:scale(1.06)}
+.bigplay svg{width:22px;height:22px;margin-left:2px}
+.bigplay.playing svg{margin-left:0}
+.uni-actions .cta{font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#cfcfcf;border:1px solid var(--line);padding:12px 18px;border-radius:999px;transition:border-color .3s,color .3s}
+.uni-actions .cta:hover{border-color:#fff;color:#fff}
+
+.uni-section{max-width:1280px;margin:0 auto;padding:clamp(36px,6vh,64px) clamp(24px,5vw,64px) 0}
+.uni-section h2{font-weight:400;font-size:clamp(24px,3vw,34px);margin-bottom:22px}
+
+/* Popular rows */
+.rows{display:flex;flex-direction:column}
+.row{
+  display:grid;grid-template-columns:28px 52px 1fr auto;gap:18px;align-items:center;
+  padding:10px 12px;border-radius:6px;transition:background .25s ease;cursor:pointer;
+}
+.row:hover,.row:focus-visible{background:rgba(255,255,255,.07)}
+.row .idx{font:14px var(--mono);color:var(--ghost);text-align:right}
+.row:hover .idx{color:#fff}
+.row .thumb{width:52px;height:52px;object-fit:cover;border-radius:3px;flex:none}
+.thumb-type{
+  width:52px;height:52px;border-radius:3px;background:#111;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font:500 15px var(--serif);letter-spacing:.06em;color:#e8e8e8;
+}
+.row .t{min-width:0}
+.row .t .title{font-size:17px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .t .sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.row .right{font:13px var(--mono);color:var(--ghost);display:flex;align-items:center;gap:14px}
+.row .rowplay{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.row:hover .rowplay,.row .rowplay.playing{opacity:1}
+.row .rowplay svg{width:11px;height:11px;margin-left:1px}
+.row .rowplay.playing svg{margin-left:0}
+
+/* Discography */
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.pill{
+  font:12px var(--mono);letter-spacing:.08em;color:#cfcfcf;
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;transition:all .25s;
+}
+.pill:hover{border-color:#fff;color:#fff}
+.pill[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+.disco{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:28px}
+.album{display:flex;flex-direction:column;gap:12px;border-radius:6px;padding:0;transition:opacity .3s}
+.album.hide{display:none}
+.album .cover{position:relative;aspect-ratio:1/1;border-radius:4px;overflow:hidden;background:#111;border:1px solid var(--line)}
+.album .cover img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.album:hover .cover img{transform:scale(1.04)}
+.cover-type{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.cover-type .big{font:400 44px var(--serif);letter-spacing:.1em}
+.cover-type .rule{width:34px;height:1px;background:#555}
+.cover-type .small{font:10px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--ghost)}
+.album .a-title{font-size:16px;line-height:1.35}
+.album .a-sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase}
+.album .cover .hoverplay{
+  position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;
+  background:#fff;color:#000;display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateY(6px);transition:all .25s ease;
+}
+.album:hover .cover .hoverplay,.album .cover .hoverplay.playing{opacity:1;transform:none}
+.album .cover .hoverplay svg{width:14px;height:14px;margin-left:1px}
+.album .cover .hoverplay.playing svg{margin-left:0}
+
+/* About + footer */
+.about p{color:#c9c9c9;font-size:18px;line-height:1.65;max-width:62ch}
+.about a{border-bottom:1px solid #444;transition:border-color .3s}
+.about a:hover{border-color:#fff}
+.uni-footer{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,90px) clamp(24px,5vw,64px) 120px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.uni-footer p,.uni-footer a{font:11px var(--mono);color:#6f6f6f;letter-spacing:.1em;text-transform:uppercase}
+.uni-footer a:hover{color:#fff}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+
+/* ============ player bar ============ */
+#playerbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(10,10,10,.92);
+  border-top:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;
+  padding:10px clamp(16px,3vw,28px);
+  transform:translateY(110%);transition:transform .45s cubic-bezier(.22,1,.36,1);
+}
+#playerbar.up{transform:none}
+.pb-left{display:flex;align-items:center;gap:12px;min-width:0}
+.pb-left img{width:44px;height:44px;border-radius:3px;object-fit:cover}
+.pb-left .pt{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pb-left .ps{font:10px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.pb-mid{display:flex;align-items:center;gap:12px;min-width:0}
+.pb-time{font:11px var(--mono);color:var(--ghost);flex:none;font-variant-numeric:tabular-nums}
+.pb-track{flex:1;height:22px;display:flex;align-items:center;cursor:pointer}
+.pb-rail{width:100%;height:3px;background:#333;border-radius:2px;position:relative}
+.pb-fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:#fff;border-radius:2px}
+.pb-track:hover .pb-fill{background:var(--accent)}
+.pb-play{width:38px;height:38px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;flex:none}
+.pb-play svg{width:14px;height:14px;margin-left:1px}
+.pb-play.playing svg{margin-left:0}
+
+@media (max-width:680px){
+  .row{grid-template-columns:20px 44px 1fr}
+  .row .right{display:none}
+  .row .thumb,.thumb-type{width:44px;height:44px}
+  .disco{grid-template-columns:repeat(2,1fr);gap:18px}
+  .pb-mid .pb-time.total{display:none}
+  .uni-header{height:52vh}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
 }
 </style>
 </head>
 <body>
-<a class="photo" href="/insights/" aria-label="Insights — articles by Josh Popkin"><img src="assets/josh-popkin.jpg" alt="Josh Popkin"></a>
-<h1>Josh Popkin&nbsp;-&nbsp;Marketing Engineer</h1>
+<a class="skip" href="#universe">Skip intro</a>
+<h1 class="visually-hidden">Josh Popkin — Marketing Engineer</h1>
+
+<!-- ACT 1: the desktop -->
+<div id="desktop" aria-label="Desktop with one folder">
+  <div class="folder-wrap" id="folderWrap">
+    <button class="folder" id="folder" aria-label="Open Josh Popkin — Marketing Engineer">
+      <svg viewBox="0 0 118 92" aria-hidden="true">
+        <path d="M6 14 Q6 8 12 8 L40 8 Q45 8 48 12 L53 18 L106 18 Q112 18 112 24 L112 26 L6 26 Z" fill="#4A9DE8"/>
+        <rect x="6" y="24" width="106" height="60" rx="7" fill="url(#g1)"/>
+        <defs>
+          <linearGradient id="g1" x1="0" y1="24" x2="0" y2="84" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#6FBBF7"/><stop offset="1" stop-color="#3F8FE0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </button>
+    <div class="folder-label" id="folderLabel">Josh Popkin - Marketing Engineer</div>
+    <div class="hint" id="hint">double-click to open</div>
+  </div>
+</div>
+
+<!-- ACT 2: the wormhole -->
+<canvas id="warp" aria-hidden="true"></canvas>
+
+<!-- ACT 3: the universe -->
+<main id="universe" hidden>
+  <header class="uni-header">
+    <img src="assets/josh-popkin.jpg" alt="Josh Popkin with his dog">
+    <div class="uni-head-content">
+      <div class="verified"><span class="dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Verified human</div>
+      <div class="uni-name">Josh Popkin</div>
+      <p class="uni-meta">Marketing Engineer &nbsp;&middot;&nbsp; New York City</p>
+      <div class="uni-actions">
+        <button class="bigplay" id="heroPlay" aria-label="Play Untouchable">
+          <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>
+        </button>
+        <a class="cta" href="/insights/who-is-josh-popkin/">Read the story</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="uni-section" aria-label="Popular">
+    <h2>Popular</h2>
+    <div class="rows">
+      <div class="row" id="rowSong" tabindex="0" role="button" aria-label="Play Untouchable">
+        <span class="idx">1</span>
+        <img class="thumb" src="assets/untouchable-cover.jpg" alt="Untouchable cover — moonlit lakeside terrace">
+        <div class="t"><div class="title">Untouchable</div><div class="sub">Single &middot; Music &middot; 2026</div></div>
+        <div class="right"><span>3:04</span>
+          <span class="rowplay" id="rowPlayBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+        </div>
+      </div>
+      <a class="row" href="/insights/who-is-josh-popkin/">
+        <span class="idx">2</span>
+        <img class="thumb" src="assets/abstract-cover.jpg" alt="Abstract painting cover">
+        <div class="t"><div class="title">Who Is Josh Popkin?</div><div class="sub">Article &middot; AI &amp; Marketing</div></div>
+        <div class="right"><span>4 min read</span></div>
+      </a>
+      <a class="row" href="https://www.westportfamilyhomes.com/insights/josh-popkin-westport-family-homes-website-rebrand/" target="_blank" rel="noopener">
+        <span class="idx">3</span>
+        <span class="thumb-type" aria-hidden="true">WFH</span>
+        <div class="t"><div class="title">Rebranding Westport Family Homes</div><div class="sub">Case study &middot; Client work</div></div>
+        <div class="right"><span>westportfamilyhomes.com &nearr;</span></div>
+      </a>
+      <a class="row" href="https://fragrance-shop-newyork.pages.dev" target="_blank" rel="noopener">
+        <span class="idx">4</span>
+        <span class="thumb-type" aria-hidden="true">FS</span>
+        <div class="t"><div class="title">The Fragrance Shop, New York</div><div class="sub">Live site &middot; Client work</div></div>
+        <div class="right"><span>visit &nearr;</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="uni-section" aria-label="Discography">
+    <h2>Discography</h2>
+    <div class="pills" role="group" aria-label="Filter by category">
+      <button class="pill" data-cat="all" aria-pressed="true">All</button>
+      <button class="pill" data-cat="music" aria-pressed="false">Music</button>
+      <button class="pill" data-cat="ai" aria-pressed="false">AI &amp; Marketing</button>
+      <button class="pill" data-cat="client" aria-pressed="false">Client work</button>
+    </div>
+    <div class="disco">
+      <div class="album" data-cat="music" id="albumSong" tabindex="0" role="button" aria-label="Play Untouchable">
+        <div class="cover">
+          <img src="assets/untouchable-cover.jpg" alt="Untouchable album cover">
+          <span class="hoverplay" id="albumPlayBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+        </div>
+        <div class="a-title">Untouchable</div>
+        <div class="a-sub">Single &middot; 2026</div>
+      </div>
+      <a class="album" data-cat="ai" href="/insights/who-is-josh-popkin/">
+        <div class="cover"><img src="assets/abstract-cover.jpg" alt="Who Is Josh Popkin article cover"></div>
+        <div class="a-title">Who Is Josh Popkin?</div>
+        <div class="a-sub">Article &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="client" href="https://www.westportfamilyhomes.com/insights/josh-popkin-westport-family-homes-website-rebrand/" target="_blank" rel="noopener">
+        <div class="cover"><div class="cover-type"><span class="big">W&thinsp;F&thinsp;H</span><span class="rule"></span><span class="small">Case Study</span></div></div>
+        <div class="a-title">Westport Family Homes</div>
+        <div class="a-sub">Rebrand &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="client" href="https://fragrance-shop-newyork.pages.dev" target="_blank" rel="noopener">
+        <div class="cover"><div class="cover-type"><span class="big">F&thinsp;S</span><span class="rule"></span><span class="small">Live Site</span></div></div>
+        <div class="a-title">The Fragrance Shop</div>
+        <div class="a-sub">New York &middot; 2026</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="uni-section about" aria-label="About">
+    <h2>About</h2>
+    <p>Marketing engineer. I build the systems that get people found — by Google, and now by AI. The work spans websites, answer engine optimization, automation, and the occasional dance record. Everything on this page was made with the tools I use for clients.</p>
+  </section>
+
+  <footer class="uni-footer">
+    <p>&copy; 2026 Josh Popkin</p>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/joshpaulpopkin/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://music.apple.com/us/artist/josh-popkin/1730161476" target="_blank" rel="noopener">Apple Music</a>
+      <a href="https://instagram.com/joshpopkinct" target="_blank" rel="noopener">Instagram</a>
+      <a href="/insights/">Insights</a>
+    </div>
+  </footer>
+</main>
+
+<!-- player -->
+<div id="playerbar" aria-label="Audio player">
+  <div class="pb-left">
+    <img src="assets/untouchable-cover.jpg" alt="">
+    <div><div class="pt">Untouchable</div><div class="ps">Josh Popkin</div></div>
+  </div>
+  <div class="pb-mid">
+    <span class="pb-time" id="tCur">0:00</span>
+    <div class="pb-track" id="track"><div class="pb-rail"><div class="pb-fill" id="fill"></div></div></div>
+    <span class="pb-time total" id="tTot">3:04</span>
+  </div>
+  <button class="pb-play" id="pbPlay" aria-label="Play or pause">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>
+  </button>
+</div>
+<audio id="song" src="assets/untouchable.m4a" preload="none"></audio>
+
+<script>
+(function(){
+  var desktop=document.getElementById('desktop'),
+      folderWrap=document.getElementById('folderWrap'),
+      folder=document.getElementById('folder'),
+      hint=document.getElementById('hint'),
+      warp=document.getElementById('warp'),
+      universe=document.getElementById('universe'),
+      reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // hint after 4s of nothing
+  var hintTimer=setTimeout(function(){hint.classList.add('show')},4000);
+
+  // single click = Finder-style select; double click = open
+  folder.addEventListener('click',function(){folderWrap.classList.add('selected')});
+  folder.addEventListener('dblclick',openPortal);
+  folder.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openPortal();}});
+  // touch: double-tap
+  var lastTap=0;
+  folder.addEventListener('touchend',function(){
+    var now=Date.now();
+    if(now-lastTap<420){openPortal();}
+    lastTap=now;
+  });
+  document.querySelector('.skip').addEventListener('click',function(e){e.preventDefault();enterUniverse(true);});
+  if(location.hash==='#universe'){enterUniverse(true);}
+
+  var opened=false;
+  function openPortal(){
+    if(opened)return; opened=true;
+    clearTimeout(hintTimer);
+    if(reduced){enterUniverse(true);return;}
+    runWarp();
+  }
+
+  function enterUniverse(instant){
+    opened=true;
+    desktop.classList.add('gone');
+    warp.style.display='none';
+    universe.hidden=false;
+    void universe.offsetHeight; // force reflow so the fade actually transitions
+    universe.classList.add('on');
+    setTimeout(function(){desktop.remove();},600);
+    if(location.hash)history.replaceState(null,'',location.pathname);
+  }
+
+  /* ---- the wormhole: white world collapses into a black hole, stars streak, arrive in the void ---- */
+  function runWarp(){
+    var ctx=warp.getContext('2d'),DPR=Math.min(devicePixelRatio||1,2);
+    function size(){warp.width=innerWidth*DPR;warp.height=innerHeight*DPR;}
+    size();
+    warp.style.display='block';
+    var W=warp.width,H=warp.height,CX=W/2,CY=H/2;
+    var stars=[];
+    for(var i=0;i<420;i++){
+      var a=Math.random()*Math.PI*2, r=Math.random();
+      stars.push({a:a, r:0.05+r*1.1, s:0.4+Math.random()*1.2});
+    }
+    var t0=performance.now(), DUR=2300;
+    function ease(x){return x<0.4 ? 1.2*x*x : 0.192+ (x-0.4)*1.6+ (x-0.4)*(x-0.4)*1.4;}
+    function frame(now){
+      var t=Math.min((now-t0)/DUR,1);
+      var v=ease(t); // velocity/progress: slow … then fast
+      // background: white → black as we fall in
+      var bg=Math.max(0,1-v*1.15);
+      ctx.fillStyle='rgb('+(255*bg|0)+','+(255*bg|0)+','+(255*bg|0)+')';
+      ctx.fillRect(0,0,W,H);
+      // event horizon
+      var hole=Math.min(v*v*Math.max(W,H)*0.9, Math.max(W,H));
+      var grad=ctx.createRadialGradient(CX,CY,0,CX,CY,Math.max(hole,1));
+      grad.addColorStop(0,'rgba(0,0,0,1)');
+      grad.addColorStop(0.8,'rgba(0,0,0,0.95)');
+      grad.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle=grad;
+      ctx.beginPath();ctx.arc(CX,CY,Math.max(hole,1),0,7);ctx.fill();
+      // accretion ring glint (the folder blue, stretched around the hole)
+      if(t>0.12&&t<0.96){
+        ctx.strokeStyle='rgba(74,157,232,'+(0.5*Math.sin(Math.PI*t))+')';
+        ctx.lineWidth=2*DPR;
+        ctx.beginPath();ctx.arc(CX,CY,Math.max(hole*0.62,10),0,7);ctx.stroke();
+      }
+      // stars streaking inward
+      var R=Math.max(W,H)*0.75;
+      for(var i=0;i<stars.length;i++){
+        var st=stars[i];
+        var p=(st.r - v*st.s*0.9)%1.15; if(p<0)p+=1.15;
+        var d1=p*R, d2=Math.max(d1 - (6+v*90)*DPR*st.s,0);
+        var x1=CX+Math.cos(st.a)*d1, y1=CY+Math.sin(st.a)*d1;
+        var x2=CX+Math.cos(st.a)*d2, y2=CY+Math.sin(st.a)*d2;
+        var lum=bg>0.5?(40+60*(1-bg)):(160+95*v);
+        ctx.strokeStyle='rgba('+lum+','+lum+','+lum+','+(0.25+0.75*st.s/1.6)+')';
+        ctx.lineWidth=Math.max(st.s*DPR*(0.4+v),0.5);
+        ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+      }
+      if(t<1){requestAnimationFrame(frame);}
+      else{enterUniverse();}
+    }
+    desktop.classList.add('gone');
+    requestAnimationFrame(frame);
+  }
+
+  /* ---- the player ---- */
+  var song=document.getElementById('song'),
+      bar=document.getElementById('playerbar'),
+      pbPlay=document.getElementById('pbPlay'),
+      heroPlay=document.getElementById('heroPlay'),
+      rowPlayBtn=document.getElementById('rowPlayBtn'),
+      albumPlayBtn=document.getElementById('albumPlayBtn'),
+      rowSong=document.getElementById('rowSong'),
+      albumSong=document.getElementById('albumSong'),
+      fill=document.getElementById('fill'),
+      tCur=document.getElementById('tCur'),
+      tTot=document.getElementById('tTot'),
+      track=document.getElementById('track');
+  var PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>',
+      PAUSE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></svg>';
+  function fmt(s){s=Math.max(0,s|0);return (s/60|0)+':'+('0'+(s%60)).slice(-2);}
+  function setIcons(playing){
+    [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].forEach(function(b){
+      b.innerHTML=playing?PAUSE:PLAY;
+      b.classList.toggle('playing',playing);
+    });
+  }
+  function toggle(e){
+    if(e){e.preventDefault();e.stopPropagation();}
+    if(song.paused){song.play();bar.classList.add('up');}
+    else{song.pause();}
+  }
+  song.addEventListener('play',function(){setIcons(true)});
+  song.addEventListener('pause',function(){setIcons(false)});
+  song.addEventListener('ended',function(){setIcons(false);song.currentTime=0;});
+  song.addEventListener('loadedmetadata',function(){tTot.textContent=fmt(song.duration)});
+  song.addEventListener('timeupdate',function(){
+    tCur.textContent=fmt(song.currentTime);
+    if(song.duration)fill.style.width=(100*song.currentTime/song.duration)+'%';
+  });
+  track.addEventListener('click',function(e){
+    var r=track.getBoundingClientRect();
+    if(song.duration)song.currentTime=song.duration*Math.min(Math.max((e.clientX-r.left)/r.width,0),1);
+  });
+  [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].forEach(function(b){b.addEventListener('click',toggle)});
+  rowSong.addEventListener('click',toggle);
+  rowSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});
+  albumSong.addEventListener('click',toggle);
+  albumSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});
+
+  /* ---- category pills ---- */
+  var pills=document.querySelectorAll('.pill'),albums=document.querySelectorAll('.album');
+  pills.forEach(function(p){
+    p.addEventListener('click',function(){
+      pills.forEach(function(q){q.setAttribute('aria-pressed','false')});
+      p.setAttribute('aria-pressed','true');
+      var cat=p.dataset.cat;
+      albums.forEach(function(a){a.classList.toggle('hide',cat!=='all'&&a.dataset.cat!==cat)});
+    });
+  });
+})();
+</script>
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
