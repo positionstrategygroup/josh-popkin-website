@@ -13,14 +13,15 @@
 <link rel="canonical" href="https://joshpopkin.com/">
 <style>
 :root{
-  --paper:#ffffff; --void:#000000; --ink:#0a0a0a; --ghost:#8c8c8c; --line:rgba(255,255,255,.14);
+  --paper:#ffffff; --void:#ffffff; --ink:#0a0a0a; --ghost:#6f6f6f; --line:rgba(0,0,0,.12);
+  --soft:#3d3d3d; --wash:#f4f4f2;
   --folder-hi:#6FBBF7; --folder-lo:#3F8FE0; --accent:#4A9DE8;
   --serif:"Times New Roman",Times,serif;
   --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{background:var(--void)}
-body{font-family:var(--serif);color:#fff;-webkit-font-smoothing:antialiased}
+html,body{background:var(--paper)}
+body{font-family:var(--serif);color:var(--ink);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
@@ -66,26 +67,26 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 }
 .uni-header::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.15) 40%,#000 96%),
-             linear-gradient(90deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 55%);
+  background:linear-gradient(180deg,rgba(255,255,255,.20) 0%,rgba(255,255,255,.10) 40%,#fff 96%),
+             linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.30) 46%,rgba(255,255,255,0) 68%);
 }
 .uni-head-content{position:relative;z-index:2;padding:0 clamp(24px,5vw,64px) clamp(28px,5vh,48px);max-width:1280px;margin:0 auto;width:100%}
-.verified{font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#cfcfcf;display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verified{font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ghost);display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .verified .dot{width:16px;height:16px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none}
 .verified .dot svg{width:9px;height:9px}
 .uni-name{font-weight:400;font-size:clamp(52px,10vw,118px);line-height:.95;letter-spacing:-.02em}
-.uni-meta{font:13px var(--mono);color:#bdbdbd;margin-top:16px;letter-spacing:.04em}
+.uni-meta{font:13px var(--mono);color:var(--ghost);margin-top:16px;letter-spacing:.04em}
 .uni-actions{margin-top:22px;display:flex;align-items:center;gap:18px}
 .bigplay{
-  width:56px;height:56px;border-radius:50%;background:#fff;color:#000;
+  width:56px;height:56px;border-radius:50%;background:var(--ink);color:#fff;
   display:flex;align-items:center;justify-content:center;flex:none;
   transition:transform .15s ease;
 }
 .bigplay:hover{transform:scale(1.06)}
 .bigplay svg{width:22px;height:22px;margin-left:2px}
 .bigplay.playing svg{margin-left:0}
-.uni-actions .cta{font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#cfcfcf;border:1px solid var(--line);padding:12px 18px;border-radius:999px;transition:border-color .3s,color .3s}
-.uni-actions .cta:hover{border-color:#fff;color:#fff}
+.uni-actions .cta{font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);border:1px solid var(--line);padding:12px 18px;border-radius:999px;transition:border-color .3s,color .3s}
+.uni-actions .cta:hover{border-color:var(--ink);color:var(--ink)}
 
 .uni-section{max-width:1280px;margin:0 auto;padding:clamp(36px,6vh,64px) clamp(24px,5vw,64px) 0}
 .uni-section h2{font-weight:400;font-size:clamp(24px,3vw,34px);margin-bottom:22px}
@@ -96,13 +97,13 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
   display:grid;grid-template-columns:28px 52px 1fr auto;gap:18px;align-items:center;
   padding:10px 12px;border-radius:6px;transition:background .25s ease;cursor:pointer;
 }
-.row:hover,.row:focus-visible{background:rgba(255,255,255,.07)}
+.row:hover,.row:focus-visible{background:rgba(0,0,0,.05)}
 .row .idx{font:14px var(--mono);color:var(--ghost);text-align:right}
-.row:hover .idx{color:#fff}
+.row:hover .idx{color:var(--ink)}
 .row .thumb{width:52px;height:52px;object-fit:cover;border-radius:3px;flex:none}
 .thumb-type{
-  width:52px;height:52px;border-radius:3px;background:#111;border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;font:500 15px var(--serif);letter-spacing:.06em;color:#e8e8e8;
+  width:52px;height:52px;border-radius:3px;background:var(--wash);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font:500 15px var(--serif);letter-spacing:.06em;color:var(--ink);
 }
 .row .t{min-width:0}
 .row .t .title{font-size:17px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -116,26 +117,26 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 /* Discography */
 .pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
 .pill{
-  font:12px var(--mono);letter-spacing:.08em;color:#cfcfcf;
+  font:12px var(--mono);letter-spacing:.08em;color:var(--soft);
   border:1px solid var(--line);border-radius:999px;padding:8px 16px;transition:all .25s;
 }
-.pill:hover{border-color:#fff;color:#fff}
-.pill[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+.pill:hover{border-color:var(--ink);color:var(--ink)}
+.pill[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 .disco{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:28px}
 .album{display:flex;flex-direction:column;gap:12px;border-radius:6px;padding:0;transition:opacity .3s}
 .album.hide{display:none}
-.album .cover{position:relative;aspect-ratio:1/1;border-radius:4px;overflow:hidden;background:#111;border:1px solid var(--line)}
+.album .cover{position:relative;aspect-ratio:1/1;border-radius:4px;overflow:hidden;background:var(--wash);border:1px solid var(--line)}
 .album .cover img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
 .album:hover .cover img{transform:scale(1.04)}
 .cover-type{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
 .cover-type .big{font:400 44px var(--serif);letter-spacing:.1em}
-.cover-type .rule{width:34px;height:1px;background:#555}
+.cover-type .rule{width:34px;height:1px;background:#c9c9c9}
 .cover-type .small{font:10px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--ghost)}
 .album .a-title{font-size:16px;line-height:1.35}
 .album .a-sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase}
 .album .cover .hoverplay{
   position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;
-  background:#fff;color:#000;display:flex;align-items:center;justify-content:center;
+  background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
   opacity:0;transform:translateY(6px);transition:all .25s ease;
 }
 .album:hover .cover .hoverplay,.album .cover .hoverplay.playing{opacity:1;transform:none}
@@ -143,17 +144,17 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .album .cover .hoverplay.playing svg{margin-left:0}
 
 /* About + footer */
-.about p{color:#c9c9c9;font-size:18px;line-height:1.65;max-width:62ch}
-.about a{border-bottom:1px solid #444;transition:border-color .3s}
-.about a:hover{border-color:#fff}
+.about p{color:var(--soft);font-size:18px;line-height:1.65;max-width:62ch}
+.about a{border-bottom:1px solid #c9c9c9;transition:border-color .3s}
+.about a:hover{border-color:var(--ink)}
 .uni-footer{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,90px) clamp(24px,5vw,64px) 120px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.uni-footer p,.uni-footer a{font:11px var(--mono);color:#6f6f6f;letter-spacing:.1em;text-transform:uppercase}
-.uni-footer a:hover{color:#fff}
+.uni-footer p,.uni-footer a{font:11px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase}
+.uni-footer a:hover{color:var(--ink)}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap}
 
 /* ============ player bar ============ */
 #playerbar{
-  position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(10,10,10,.92);
+  position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(255,255,255,.94);
   border-top:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;
   padding:10px clamp(16px,3vw,28px);
@@ -167,10 +168,10 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .pb-mid{display:flex;align-items:center;gap:12px;min-width:0}
 .pb-time{font:11px var(--mono);color:var(--ghost);flex:none;font-variant-numeric:tabular-nums}
 .pb-track{flex:1;height:22px;display:flex;align-items:center;cursor:pointer}
-.pb-rail{width:100%;height:3px;background:#333;border-radius:2px;position:relative}
-.pb-fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:#fff;border-radius:2px}
+.pb-rail{width:100%;height:3px;background:#dcdcdc;border-radius:2px;position:relative}
+.pb-fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--ink);border-radius:2px}
 .pb-track:hover .pb-fill{background:var(--accent)}
-.pb-play{width:38px;height:38px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;flex:none}
+.pb-play{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
 .pb-play svg{width:14px;height:14px;margin-left:1px}
 .pb-play.playing svg{margin-left:0}
 
@@ -437,16 +438,16 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     function frame(now){
       var t=Math.min((now-t0)/DUR,1);
       var v=ease(t); // velocity/progress: slow … then fast
-      // background: white → black as we fall in
+      // background: white → dark as we fall in, then the light takes over
       var bg=Math.max(0,1-v*1.15);
       ctx.fillStyle='rgb('+(255*bg|0)+','+(255*bg|0)+','+(255*bg|0)+')';
       ctx.fillRect(0,0,W,H);
-      // event horizon
+      // event horizon — light, so the fall ends on the white page
       var hole=Math.min(v*v*Math.max(W,H)*0.9, Math.max(W,H));
       var grad=ctx.createRadialGradient(CX,CY,0,CX,CY,Math.max(hole,1));
-      grad.addColorStop(0,'rgba(0,0,0,1)');
-      grad.addColorStop(0.8,'rgba(0,0,0,0.95)');
-      grad.addColorStop(1,'rgba(0,0,0,0)');
+      grad.addColorStop(0,'rgba(255,255,255,1)');
+      grad.addColorStop(0.8,'rgba(255,255,255,0.95)');
+      grad.addColorStop(1,'rgba(255,255,255,0)');
       ctx.fillStyle=grad;
       ctx.beginPath();ctx.arc(CX,CY,Math.max(hole,1),0,7);ctx.fill();
       // accretion ring glint (the folder blue, stretched around the hole)
@@ -463,10 +464,15 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         var d1=p*R, d2=Math.max(d1 - (6+v*90)*DPR*st.s,0);
         var x1=CX+Math.cos(st.a)*d1, y1=CY+Math.sin(st.a)*d1;
         var x2=CX+Math.cos(st.a)*d2, y2=CY+Math.sin(st.a)*d2;
-        var lum=bg>0.5?(40+60*(1-bg)):(160+95*v);
+        var lum=bg>0.5?(40+60*(1-bg)):(200-120*v);
         ctx.strokeStyle='rgba('+lum+','+lum+','+lum+','+(0.25+0.75*st.s/1.6)+')';
         ctx.lineWidth=Math.max(st.s*DPR*(0.4+v),0.5);
         ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+      }
+      // final wash: guarantee a clean white landing (corners the disc can't reach)
+      if(t>0.82){
+        ctx.fillStyle='rgba(255,255,255,'+Math.min((t-0.82)/0.18,1)+')';
+        ctx.fillRect(0,0,W,H);
       }
       if(t<1){requestAnimationFrame(frame);}
       else{enterUniverse();}
