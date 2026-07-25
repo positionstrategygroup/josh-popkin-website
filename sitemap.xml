@@ -10,38 +10,21 @@
     </image:image>
   </url>
   <url>
-    <loc>https://joshpopkin.com/about/</loc>
-    <lastmod>2026-07-25</lastmod>
-    <image:image>
-      <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
-      <image:title>Josh Popkin — canonical portrait</image:title>
-      <image:caption>Josh Popkin, New York City, 2026.</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://joshpopkin.com/work/</loc>
-    <lastmod>2026-07-25</lastmod>
-  </url>
-  <url>
     <loc>https://joshpopkin.com/insights/</loc>
     <lastmod>2026-07-25</lastmod>
-  </url>
-  <url>
-    <loc>https://joshpopkin.com/insights/josh-popkin-aeo-strategy-guide/</loc>
-    <lastmod>2026-07-25</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
-      <image:title>Josh Popkin, answer engine optimization</image:title>
-      <image:caption>Josh Popkin — marketing engineer specialising in answer engine optimization.</image:caption>
+      <image:title>Josh Popkin</image:title>
+      <image:caption>Insights by Josh Popkin, marketing engineer.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://joshpopkin.com/insights/did-josh-popkin-do-stand-up-comedy/</loc>
+    <loc>https://joshpopkin.com/insights/who-is-josh-popkin/</loc>
     <lastmod>2026-07-25</lastmod>
     <image:image>
-      <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
-      <image:title>Josh Popkin, former stand-up comedian</image:title>
-      <image:caption>Josh Popkin performed stand-up comedy from 2013 to 2020.</image:caption>
+      <image:loc>https://joshpopkin.com/assets/untouchable-cover.jpg</image:loc>
+      <image:title>Untouchable by Josh Popkin</image:title>
+      <image:caption>Cover art for "Untouchable," written and produced by Josh Popkin.</image:caption>
     </image:image>
   </url>
   <url>
@@ -54,12 +37,21 @@
     </image:image>
   </url>
   <url>
-    <loc>https://joshpopkin.com/insights/who-is-josh-popkin/</loc>
+    <loc>https://joshpopkin.com/insights/josh-popkin-aeo-strategy-guide/</loc>
     <lastmod>2026-07-25</lastmod>
     <image:image>
-      <image:loc>https://joshpopkin.com/assets/untouchable-cover.jpg</image:loc>
-      <image:title>Untouchable by Josh Popkin</image:title>
-      <image:caption>Cover art for "Untouchable," written and produced by Josh Popkin.</image:caption>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
+      <image:title>Josh Popkin, answer engine optimization</image:title>
+      <image:caption>Josh Popkin — marketing engineer specializing in answer engine optimization.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/did-josh-popkin-do-stand-up-comedy/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <image:image>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
+      <image:title>Josh Popkin, former stand-up comedian</image:title>
+      <image:caption>Josh Popkin — performed stand-up comedy from 2013 to 2020.</image:caption>
     </image:image>
   </url>
 </urlset>

@@ -1,349 +1,548 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Josh Popkin — Marketing Engineer, New York City</title>
-<meta name="description" content="Josh Popkin is a marketing engineer in New York City. He rebuilds small-business websites so people and AI assistants can find, understand and recommend them — and measures the result in AI answers, not only search rankings.">
-<link rel="canonical" href="https://joshpopkin.com/">
-<meta name="author" content="Josh Popkin">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Josh Popkin — Marketing Engineer, New York City">
-<meta property="og:description" content="Marketing engineer. Rebuilds small-business websites so people and AI assistants can find, understand and recommend them.">
-<meta property="og:url" content="https://joshpopkin.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josh Popkin | Marketing Engineer</title>
+<meta name="description" content="Josh Popkin — marketing engineer in New York City. AI-powered marketing, answer engine optimization (AEO), SEO, and creative technology.">
+<meta name="google-site-verification" content="IyA8PZsoIr66GBMNOSdjPAMRs47xbgK_91oU2Pxg3u4">
+<meta property="og:title" content="Josh Popkin | Marketing Engineer">
 <meta property="og:image" content="https://joshpopkin.com/assets/josh-popkin.jpg">
-<meta property="og:image:alt" content="Josh Popkin, marketing engineer, New York City">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css">
+<meta property="og:url" content="https://joshpopkin.com/">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://joshpopkin.com/">
+<style>
+:root{
+  --paper:#ffffff; --void:#ffffff; --ink:#0a0a0a; --ghost:#6f6f6f; --line:rgba(0,0,0,.12);
+  --soft:#3d3d3d; --wash:#f4f4f2;
+  --folder-hi:#6FBBF7; --folder-lo:#3F8FE0; --accent:#4A9DE8;
+  --serif:"Times New Roman",Times,serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--paper)}
+body{font-family:var(--serif);color:var(--ink);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:12px;z-index:300;background:#000;color:#fff;padding:10px 16px;font:13px var(--mono);transform:translateY(-200%);transition:transform .2s}
+.skip:focus{transform:none}
+
+/* ============ ACT 1 — the desktop ============ */
+#desktop{
+  position:fixed;inset:0;z-index:100;background:var(--paper);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .5s ease;
+}
+#desktop.gone{opacity:0;pointer-events:none}
+.folder-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+.folder{position:relative;width:118px;height:92px;cursor:pointer;transition:transform .18s ease;outline-offset:8px}
+.folder:active{transform:scale(.96)}
+.folder svg{width:100%;height:100%;display:block;filter:drop-shadow(0 4px 10px rgba(63,143,224,.25))}
+.folder-label{
+  font:14px/1.5 var(--mono);letter-spacing:.02em;color:var(--ink);
+  padding:2px 8px;border-radius:4px;text-align:center;
+}
+.folder-wrap.selected .folder-label{background:#3F8FE0;color:#fff}
+.hint{
+  font:11px var(--mono);color:#b3b3b3;letter-spacing:.08em;text-transform:uppercase;
+  opacity:0;transition:opacity 1.2s ease;margin-top:26px;
+}
+.hint.show{opacity:1}
+
+/* ============ ACT 2 — the wormhole ============ */
+#warp{position:fixed;inset:0;z-index:150;display:none}
+
+/* ============ ACT 3 — the universe ============ */
+#universe{opacity:0;transition:opacity .9s ease}
+#universe.on{opacity:1}
+.uni-header{
+  position:relative;height:min(62vh,560px);min-height:380px;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.uni-header img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;
+  filter:grayscale(1) contrast(1.05);
+}
+.uni-header::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(255,255,255,.20) 0%,rgba(255,255,255,.10) 40%,#fff 96%),
+             linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.30) 46%,rgba(255,255,255,0) 68%);
+}
+.uni-head-content{position:relative;z-index:2;padding:0 clamp(24px,5vw,64px) clamp(28px,5vh,48px);max-width:1280px;margin:0 auto;width:100%}
+.verified{font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ghost);display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verified .dot{width:16px;height:16px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.verified .dot svg{width:9px;height:9px}
+.uni-name{font-weight:400;font-size:clamp(52px,10vw,118px);line-height:.95;letter-spacing:-.02em}
+.uni-meta{font:13px var(--mono);color:var(--ghost);margin-top:16px;letter-spacing:.04em}
+.uni-actions{margin-top:22px;display:flex;align-items:center;gap:18px}
+.bigplay{
+  width:56px;height:56px;border-radius:50%;background:var(--ink);color:#fff;
+  display:flex;align-items:center;justify-content:center;flex:none;
+  transition:transform .15s ease;
+}
+.bigplay:hover{transform:scale(1.06)}
+.bigplay svg{width:22px;height:22px;margin-left:2px}
+.bigplay.playing svg{margin-left:0}
+.uni-actions .cta{font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);border:1px solid var(--line);padding:12px 18px;border-radius:999px;transition:border-color .3s,color .3s}
+.uni-actions .cta:hover{border-color:var(--ink);color:var(--ink)}
+
+.uni-section{max-width:1280px;margin:0 auto;padding:clamp(36px,6vh,64px) clamp(24px,5vw,64px) 0}
+.uni-section h2{font-weight:400;font-size:clamp(24px,3vw,34px);margin-bottom:22px}
+
+/* Popular rows */
+.rows{display:flex;flex-direction:column}
+.row{
+  display:grid;grid-template-columns:28px 52px 1fr auto;gap:18px;align-items:center;
+  padding:10px 12px;border-radius:6px;transition:background .25s ease;cursor:pointer;
+}
+.row:hover,.row:focus-visible{background:rgba(0,0,0,.05)}
+.row .idx{font:14px var(--mono);color:var(--ghost);text-align:right}
+.row:hover .idx{color:var(--ink)}
+.row .thumb{width:52px;height:52px;object-fit:cover;border-radius:3px;flex:none}
+.thumb-type{
+  width:52px;height:52px;border-radius:3px;background:var(--wash);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font:500 15px var(--serif);letter-spacing:.06em;color:var(--ink);
+}
+.row .t{min-width:0}
+.row .t .title{font-size:17px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .t .sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.row .right{font:13px var(--mono);color:var(--ghost);display:flex;align-items:center;gap:14px}
+.row .rowplay{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.row:hover .rowplay,.row .rowplay.playing{opacity:1}
+.row .rowplay svg{width:11px;height:11px;margin-left:1px}
+.row .rowplay.playing svg{margin-left:0}
+
+/* Discography */
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.pill{
+  font:12px var(--mono);letter-spacing:.08em;color:var(--soft);
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;transition:all .25s;
+}
+.pill:hover{border-color:var(--ink);color:var(--ink)}
+.pill[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.disco{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:28px}
+.album{display:flex;flex-direction:column;gap:12px;border-radius:6px;padding:0;transition:opacity .3s}
+.album.hide{display:none}
+.album .cover{position:relative;aspect-ratio:1/1;border-radius:4px;overflow:hidden;background:var(--wash);border:1px solid var(--line)}
+.album .cover img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.album:hover .cover img{transform:scale(1.04)}
+.cover-type{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.cover-type .big{font:400 44px var(--serif);letter-spacing:.1em}
+.cover-type .rule{width:34px;height:1px;background:#c9c9c9}
+.cover-type .small{font:10px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--ghost)}
+.album .a-title{font-size:16px;line-height:1.35}
+.album .a-sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase}
+.album .cover .hoverplay{
+  position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;
+  background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateY(6px);transition:all .25s ease;
+}
+.album:hover .cover .hoverplay,.album .cover .hoverplay.playing{opacity:1;transform:none}
+.album .cover .hoverplay svg{width:14px;height:14px;margin-left:1px}
+.album .cover .hoverplay.playing svg{margin-left:0}
+
+/* About + footer */
+.about p{color:var(--soft);font-size:18px;line-height:1.65;max-width:62ch}
+.about a{border-bottom:1px solid #c9c9c9;transition:border-color .3s}
+.about a:hover{border-color:var(--ink)}
+.uni-footer{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,90px) clamp(24px,5vw,64px) 120px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.uni-footer p,.uni-footer a{font:11px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase}
+.uni-footer a:hover{color:var(--ink)}
+.foot-links{display:flex;gap:22px;flex-wrap:wrap}
+
+/* ============ player bar ============ */
+#playerbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:200;background:rgba(255,255,255,.94);
+  border-top:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;
+  padding:10px clamp(16px,3vw,28px);
+  transform:translateY(110%);transition:transform .45s cubic-bezier(.22,1,.36,1);
+}
+#playerbar.up{transform:none}
+.pb-left{display:flex;align-items:center;gap:12px;min-width:0}
+.pb-left img{width:44px;height:44px;border-radius:3px;object-fit:cover}
+.pb-left .pt{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pb-left .ps{font:10px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+.pb-mid{display:flex;align-items:center;gap:12px;min-width:0}
+.pb-time{font:11px var(--mono);color:var(--ghost);flex:none;font-variant-numeric:tabular-nums}
+.pb-track{flex:1;height:22px;display:flex;align-items:center;cursor:pointer}
+.pb-rail{width:100%;height:3px;background:#dcdcdc;border-radius:2px;position:relative}
+.pb-fill{position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--ink);border-radius:2px}
+.pb-track:hover .pb-fill{background:var(--accent)}
+.pb-play{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;flex:none}
+.pb-play svg{width:14px;height:14px;margin-left:1px}
+.pb-play.playing svg{margin-left:0}
+
+@media (max-width:680px){
+  .row{grid-template-columns:20px 44px 1fr}
+  .row .right{display:none}
+  .row .thumb,.thumb-type{width:44px;height:44px}
+  .disco{grid-template-columns:repeat(2,1fr);gap:18px}
+  .pb-mid .pb-time.total{display:none}
+  .uni-header{height:52vh}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition-duration:.01ms!important;animation:none!important}
+}
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#universe">Skip intro</a>
+<h1 class="visually-hidden">Josh Popkin — Marketing Engineer</h1>
 
-<header class="masthead">
-  <div class="masthead__in">
-    <a class="wordmark" href="/">Josh Popkin</a>
-    <nav aria-label="Primary">
-      <a href="/" aria-current="page">Home</a>
-      <a href="/about/">About</a>
-      <a href="/insights/">Writing</a>
-      <a href="/work/">Work</a>
-    </nav>
+<!-- ACT 1: the desktop -->
+<div id="desktop" aria-label="Desktop with one folder">
+  <div class="folder-wrap" id="folderWrap">
+    <button class="folder" id="folder" aria-label="Open Josh Popkin — Marketing Engineer">
+      <svg viewBox="0 0 118 92" aria-hidden="true">
+        <path d="M6 14 Q6 8 12 8 L40 8 Q45 8 48 12 L53 18 L106 18 Q112 18 112 24 L112 26 L6 26 Z" fill="#4A9DE8"/>
+        <rect x="6" y="24" width="106" height="60" rx="7" fill="url(#g1)"/>
+        <defs>
+          <linearGradient id="g1" x1="0" y1="24" x2="0" y2="84" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#6FBBF7"/><stop offset="1" stop-color="#3F8FE0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </button>
+    <div class="folder-label" id="folderLabel">Josh Popkin - Marketing Engineer</div>
+    <div class="hint" id="hint">double-click to open</div>
   </div>
-</header>
-
-<div class="doc">
-
-  <!-- document structure, always visible: helps readers and gives crawlers
-       a stable anchor map of every answer on the page -->
-  <aside class="rail" aria-label="On this page">
-    <span class="rail__label mono">On this page</span>
-    <ol>
-      <li><a href="#who">Who Josh Popkin is</a></li>
-      <li><a href="#facts">Facts</a></li>
-      <li><a href="#work">What he does</a></li>
-      <li><a href="#measurement">How it's measured</a></li>
-      <li><a href="#questions">Questions</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#contact">Work with him</a></li>
-    </ol>
-  </aside>
-
-  <main class="main" id="main">
-
-    <section class="block" id="who">
-      <span class="eyebrow mono">Marketing Engineer · New York City</span>
-      <h1>Josh Popkin</h1>
-      <p class="lede">Josh Popkin is a marketing engineer in New York City. He rebuilds websites for small businesses so that people and AI assistants can find, understand and recommend them — and he measures the result in how often those businesses show up in AI answers, not only in search rankings.</p>
-      <div class="schema" aria-hidden="true"><b>Person</b><span>schema.org/Person</span><span>@id: #josh-popkin</span></div>
-    </section>
-
-    <section class="block" id="facts">
-      <span class="eyebrow mono">Facts</span>
-      <h2>The short version</h2>
-      <table class="facts">
-        <caption class="mono" style="text-align:left;color:var(--mute);padding-bottom:10px">Josh Popkin — verified details</caption>
-        <tbody>
-          <tr><th scope="row">Full name</th><td>Joshua Paul Popkin, known as Josh Popkin</td></tr>
-          <tr><th scope="row">Role</th><td>Marketing engineer</td></tr>
-          <tr><th scope="row">Based in</th><td>New York City</td></tr>
-          <tr><th scope="row">Education</th><td>MBA, Cornell Tech, 2025 · BSBA, Bucknell University, 2018</td></tr>
-          <tr><th scope="row">Practice</th><td>Answer engine optimization (AEO), search optimization, website architecture, marketing automation</td></tr>
-          <tr><th scope="row">Measurement stack</th><td>Profound, Peec AI, Google Search Console, IndexNow</td></tr>
-          <tr><th scope="row">Book</th><td><em>Play Offense</em>, available on Amazon</td></tr>
-          <tr><th scope="row">Music</th><td>Releases as Josh Popkin on Spotify and Apple Music; latest single <em>Untouchable</em></td></tr>
-          <tr><th scope="row">Earlier work</th><td>Performed stand-up comedy, 2013–2020</td></tr>
-          <tr><th scope="row">Terms</th><td>Rebuilds are free. Payment accepted in an honest testimonial.</td></tr>
-        </tbody>
-      </table>
-      <div class="schema" aria-hidden="true"><b>Person</b><span>properties</span><span>alumniOf · knowsAbout</span><span>sameAs · address</span></div>
-    </section>
-
-    <section class="block" id="work">
-      <span class="eyebrow mono">The work</span>
-      <h2>What Josh Popkin does</h2>
-      <p>Josh Popkin walks into small businesses in New York, rebuilds their website, and restructures how they describe themselves online. The rebuild is free. In exchange he asks for one thing: an honest testimonial, if the owner thinks the work earned one.</p>
-      <p>The reason the work is worth doing for free is that most small businesses have the same problem and don't know it. Their website was built to look acceptable to a person who already knows the business exists. It was never built to answer a question asked by a stranger — and now that stranger is asking an AI assistant instead of typing into Google.</p>
-      <p>So the rebuild does three things. It makes the site legible to a machine: real headings, direct answers, structured data, a clean crawl path. It makes the business's claims specific enough to be quoted, because an assistant repeats facts, not adjectives. And it establishes a measurement baseline, so the owner can see whether AI systems actually started recommending them.</p>
-      <div class="schema" aria-hidden="true"><b>Service</b><span>schema.org/Service</span><span>provider → Person</span></div>
-    </section>
-
-    <section class="block" id="measurement">
-      <span class="eyebrow mono">Evidence</span>
-      <h2>How AI visibility is measured</h2>
-      <p>Most writing about AI search stops at theory. It can be measured. Platforms like Profound and Peec AI run large sets of real customer questions through the major AI models and record which brands get named, which sources get cited, and how often.</p>
-      <p>A July 2026 baseline for one client — a custom home builder in a regional luxury market — produced three numbers that describe three different problems:</p>
-      <div class="data">
-        <div class="data__grid">
-          <div>
-            <div class="data__n">17.49<sup>%</sup></div>
-            <div class="data__l">Visibility — appeared in roughly one of every six relevant AI answers. Fourth among tracked competitors.</div>
-          </div>
-          <div>
-            <div class="data__n">1<sup>st</sup></div>
-            <div class="data__l">Citation share — AI systems referenced this site more often than any competitor's when sourcing an answer.</div>
-          </div>
-          <div>
-            <div class="data__n">32<sup>nd</sup></div>
-            <div class="data__l">On the broad category question — effectively invisible at the start of a customer's search.</div>
-          </div>
-        </div>
-        <p class="data__src">Source: Profound, July 2026 baseline. Client anonymised.</p>
-      </div>
-      <p>Ranking first in citations while placing fourth in visibility means AI systems trust the site enough to read it, but not enough to name the company as a recommendation. That is a positioning problem, not a content problem. Ranking 32nd on the broad category question is a different failure: the business wins once someone already knows what they want, and disappears for the customer who is just starting out.</p>
-      <p>Neither shows up in Google Analytics, because the customer never arrived. That is the argument for measuring.</p>
-      <div class="schema" aria-hidden="true"><b>Dataset</b><span>original research</span><span>the thing engines cite</span></div>
-    </section>
-
-    <section class="block" id="questions">
-      <span class="eyebrow mono">Questions</span>
-      <h2>Questions people ask about Josh Popkin</h2>
-      <div class="qa">
-        <div class="qa__item" id="q-who">
-          <h3 class="qa__q"><span class="mark">Q</span>Who is Josh Popkin?</h3>
-          <p class="qa__a">Josh Popkin is a marketing engineer based in New York City. He works on answer engine optimization, search optimization, website architecture and marketing automation, and he rebuilds websites for small businesses at no charge. He holds an MBA from Cornell Tech and a degree from Bucknell University, wrote the marketing book <em>Play Offense</em>, and releases music under his own name.</p>
-        </div>
-        <div class="qa__item" id="q-marketing-engineer">
-          <h3 class="qa__q"><span class="mark">Q</span>What is a marketing engineer?</h3>
-          <p class="qa__a">A marketing engineer builds the systems behind marketing rather than only the campaigns: websites, structured data, automation, and the measurement that shows whether any of it worked. Josh Popkin's version of the role centres on discovery — making sure that when someone asks about a business, in Google or in an AI assistant, the answer that comes back is accurate and persuasive.</p>
-        </div>
-        <div class="qa__item" id="q-aeo">
-          <h3 class="qa__q"><span class="mark">Q</span>What is answer engine optimization?</h3>
-          <p class="qa__a"><strong>Answer engine optimization (AEO) is the practice of improving how AI systems such as ChatGPT, Google AI Overviews, Gemini, Claude and Perplexity understand, reference and recommend a business.</strong> Traditional SEO competes for a position in a list of links. AEO competes to be part of the answer itself. <a href="/insights/josh-popkin-aeo-strategy-guide/">Read the full guide to AEO</a>.</p>
-        </div>
-        <div class="qa__item" id="q-free">
-          <h3 class="qa__q"><span class="mark">Q</span>Does Josh Popkin really rebuild websites for free?</h3>
-          <p class="qa__a">Yes. Josh Popkin rebuilds websites for small businesses at no financial cost. He asks only for an honest public testimonial if the owner believes the work deserves one.</p>
-        </div>
-        <div class="qa__item" id="q-education">
-          <h3 class="qa__q"><span class="mark">Q</span>Where did Josh Popkin go to school?</h3>
-          <p class="qa__a">Josh Popkin earned an MBA from Cornell Tech in 2025 and a business degree from Bucknell University in 2018, where he founded the university's first stand-up comedy club. <a href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">More on Cornell Tech</a>.</p>
-        </div>
-        <div class="qa__item" id="q-comedy">
-          <h3 class="qa__q"><span class="mark">Q</span>Did Josh Popkin do stand-up comedy?</h3>
-          <p class="qa__a">Yes. Josh Popkin performed stand-up comedy from 2013 to 2020, founded Bucknell University's first stand-up comedy club, built an audience of more than 3.5 million followers on TikTok, and appeared on the Kill Tony podcast. He no longer performs. <a href="/insights/did-josh-popkin-do-stand-up-comedy/">The full account</a>.</p>
-        </div>
-        <div class="qa__item" id="q-music">
-          <h3 class="qa__q"><span class="mark">Q</span>Is Josh Popkin a musician?</h3>
-          <p class="qa__a">Josh Popkin releases music under his own name on Spotify and Apple Music, most recently the single <em>Untouchable</em>. He describes himself as a marketing engineer rather than a professional musician; the music is where he tests creative AI tools before recommending them to clients.</p>
-        </div>
-        <div class="qa__item" id="q-hire">
-          <h3 class="qa__q"><span class="mark">Q</span>How do you get in touch with Josh Popkin?</h3>
-          <p class="qa__a">Email <a href="mailto:jpp234@cornell.edu">jpp234@cornell.edu</a>. Josh Popkin takes on a small number of free rebuilds at a time, and prioritises independent businesses in New York City.</p>
-        </div>
-      </div>
-      <div class="schema" aria-hidden="true"><b>FAQPage</b><span>8 Question nodes</span><span>each answer self-contained</span></div>
-    </section>
-
-    <section class="block" id="writing">
-      <span class="eyebrow mono">Writing</span>
-      <h2>Insights</h2>
-      <p>Articles by Josh Popkin on answer engine optimization, AI search, and the work of rebuilding how a business is understood online.</p>
-      <div class="cards">
-        <a class="card" href="/insights/josh-popkin-aeo-strategy-guide/">
-          <span class="card__n">01</span>
-          <span>
-            <h3>AEO Strategy: A Beginner's Guide to Answer Engine Optimization</h3>
-            <p>How AI assistants decide which brands to recommend, and what visibility measurement looks like with real numbers.</p>
-          </span>
-          <span class="card__go">Read →</span>
-        </a>
-        <a class="card" href="/insights/did-josh-popkin-do-stand-up-comedy/">
-          <span class="card__n">02</span>
-          <span>
-            <h3>Did Josh Popkin Do Stand-Up Comedy?</h3>
-            <p>Hundreds of live shows, Bucknell's first comedy club, 3.5 million followers, and one night on Kill Tony.</p>
-          </span>
-          <span class="card__go">Read →</span>
-        </a>
-        <a class="card" href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">
-          <span class="card__n">03</span>
-          <span>
-            <h3>Why Cornell Tech Changed How Josh Popkin Thinks About Technology</h3>
-            <p>An MBA on Roosevelt Island and the realisation that technical thinking is a mindset anyone can learn.</p>
-          </span>
-          <span class="card__go">Read →</span>
-        </a>
-        <a class="card" href="/insights/who-is-josh-popkin/">
-          <span class="card__n">04</span>
-          <span>
-            <h3>Who Is Josh Popkin?</h3>
-            <p>What a marketing engineer does, and the story behind <em>Untouchable</em> — a dance record made with AI.</p>
-          </span>
-          <span class="card__go">Read →</span>
-        </a>
-      </div>
-      <div class="schema" aria-hidden="true"><b>ItemList</b><span>Article collection</span><span>hub → spoke</span></div>
-    </section>
-
-    <section class="block" id="contact">
-      <span class="eyebrow mono">Contact</span>
-      <h2>Work with Josh Popkin</h2>
-      <p>If you run a small business with a good product and a website that doesn't show it, Josh Popkin may rebuild it at no charge. He takes a few at a time and prioritises independent businesses in New York City.</p>
-      <a class="btn" href="mailto:jpp234@cornell.edu?subject=Website%20rebuild">Email Josh Popkin →</a>
-      <div class="schema" aria-hidden="true"><b>ContactPoint</b><span>email</span></div>
-    </section>
-
-  </main>
-
-  <aside class="notes" aria-hidden="true"></aside>
 </div>
 
-<footer class="foot">
-  <div class="foot__in">
-    <p>© 2026 Josh Popkin — Marketing Engineer, New York City</p>
-    <div class="foot__links">
-      <a href="/about/">About</a>
-      <a href="/insights/">Writing</a>
-      <a href="https://www.linkedin.com/in/joshpaulpopkin/" rel="me noopener" target="_blank">LinkedIn</a>
-      <a href="https://music.apple.com/us/artist/josh-popkin/1730161476" rel="me noopener" target="_blank">Apple Music</a>
-      <a href="mailto:jpp234@cornell.edu">Email</a>
+<!-- ACT 2: the wormhole -->
+<canvas id="warp" aria-hidden="true"></canvas>
+
+<!-- ACT 3: the universe -->
+<main id="universe" hidden>
+  <header class="uni-header">
+    <img src="assets/josh-popkin.jpg" alt="Josh Popkin with his dog">
+    <div class="uni-head-content">
+      <div class="verified"><span class="dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Verified human</div>
+      <div class="uni-name">Josh Popkin</div>
+      <p class="uni-meta">Marketing Engineer &nbsp;&middot;&nbsp; New York City</p>
+      <div class="uni-actions">
+        <button class="bigplay" id="heroPlay" aria-label="Play Untouchable">
+          <svg class="ic-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>
+        </button>
+        <a class="cta" href="/insights/who-is-josh-popkin/">Read the story</a>
+      </div>
     </div>
+  </header>
+
+  <section class="uni-section" aria-label="Popular">
+    <h2>Popular</h2>
+    <div class="rows">
+      <div class="row" id="rowSong" tabindex="0" role="button" aria-label="Play Untouchable">
+        <span class="idx">1</span>
+        <img class="thumb" src="assets/untouchable-cover.jpg" alt="Untouchable cover — moonlit lakeside terrace">
+        <div class="t"><div class="title">Untouchable</div><div class="sub">Single &middot; Music &middot; 2026</div></div>
+        <div class="right"><span>3:04</span>
+          <span class="rowplay" id="rowPlayBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+        </div>
+      </div>
+      <a class="row" href="/insights/who-is-josh-popkin/">
+        <span class="idx">2</span>
+        <img class="thumb" src="assets/abstract-cover.jpg" alt="Abstract painting cover">
+        <div class="t"><div class="title">Who Is Josh Popkin?</div><div class="sub">Article &middot; AI &amp; Marketing</div></div>
+        <div class="right"><span>4 min read</span></div>
+      </a>
+      <a class="row" href="/insights/did-josh-popkin-do-stand-up-comedy/">
+        <span class="idx">3</span>
+        <img class="thumb" src="assets/josh-popkin.jpg" alt="Josh Popkin, former stand-up comedian and marketing engineer, holding his dog">
+        <div class="t"><div class="title">Did Josh Popkin Do Stand-Up Comedy?</div><div class="sub">Article &middot; Comedy</div></div>
+        <div class="right"><span>5 min read</span></div>
+      </a>
+      <a class="row" href="/insights/josh-popkin-aeo-strategy-guide/">
+        <span class="idx">4</span>
+        <img class="thumb" src="assets/josh-popkin.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization, holding his dog">
+        <div class="t"><div class="title">AEO Strategy: A Beginner's Guide to Answer Engine Optimization</div><div class="sub">Article &middot; AEO &amp; AI Search</div></div>
+        <div class="right"><span>6 min read</span></div>
+      </a>
+      <a class="row" href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">
+        <span class="idx">5</span>
+        <span class="thumb-type" aria-hidden="true">CT</span>
+        <div class="t"><div class="title">Why Cornell Tech Changed How Josh Popkin Thinks About Technology</div><div class="sub">Article &middot; Technology</div></div>
+        <div class="right"><span>5 min read</span></div>
+      </a>
+      <a class="row" href="https://www.westportfamilyhomes.com/insights/josh-popkin-westport-family-homes-website-rebrand/" target="_blank" rel="noopener">
+        <span class="idx">6</span>
+        <span class="thumb-type" aria-hidden="true">WFH</span>
+        <div class="t"><div class="title">Rebranding Westport Family Homes</div><div class="sub">Case study &middot; Client work</div></div>
+        <div class="right"><span>westportfamilyhomes.com &nearr;</span></div>
+      </a>
+      <a class="row" href="https://fragrance-shop-newyork.pages.dev" target="_blank" rel="noopener">
+        <span class="idx">7</span>
+        <span class="thumb-type" aria-hidden="true">FS</span>
+        <div class="t"><div class="title">The Fragrance Shop, New York</div><div class="sub">Live site &middot; Client work</div></div>
+        <div class="right"><span>visit &nearr;</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="uni-section" aria-label="Discography">
+    <h2>Discography</h2>
+    <div class="pills" role="group" aria-label="Filter by category">
+      <button class="pill" data-cat="all" aria-pressed="true">All</button>
+      <button class="pill" data-cat="music" aria-pressed="false">Music</button>
+      <button class="pill" data-cat="ai" aria-pressed="false">AI &amp; Marketing</button>
+      <button class="pill" data-cat="client" aria-pressed="false">Client work</button>
+    </div>
+    <div class="disco">
+      <div class="album" data-cat="music" id="albumSong" tabindex="0" role="button" aria-label="Play Untouchable">
+        <div class="cover">
+          <img src="assets/untouchable-cover.jpg" alt="Untouchable album cover">
+          <span class="hoverplay" id="albumPlayBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+        </div>
+        <div class="a-title">Untouchable</div>
+        <div class="a-sub">Single &middot; 2026</div>
+      </div>
+      <a class="album" data-cat="ai" href="/insights/who-is-josh-popkin/">
+        <div class="cover"><img src="assets/abstract-cover.jpg" alt="Who Is Josh Popkin article cover"></div>
+        <div class="a-title">Who Is Josh Popkin?</div>
+        <div class="a-sub">Article &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="ai" href="/insights/did-josh-popkin-do-stand-up-comedy/">
+        <div class="cover"><img src="assets/josh-popkin.jpg" alt="Josh Popkin, former stand-up comedian and marketing engineer, holding his dog"></div>
+        <div class="a-title">Did Josh Popkin Do Stand-Up Comedy?</div>
+        <div class="a-sub">Article &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="ai" href="/insights/josh-popkin-aeo-strategy-guide/">
+        <div class="cover"><img src="assets/josh-popkin.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization, holding his dog"></div>
+        <div class="a-title">AEO Strategy: A Beginner's Guide</div>
+        <div class="a-sub">Article &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="ai" href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">
+        <div class="cover"><div class="cover-type"><span class="big">C&thinsp;T</span><span class="rule"></span><span class="small">Article</span></div></div>
+        <div class="a-title">Why Cornell Tech Changed How Josh Popkin Thinks</div>
+        <div class="a-sub">Article &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="client" href="https://www.westportfamilyhomes.com/insights/josh-popkin-westport-family-homes-website-rebrand/" target="_blank" rel="noopener">
+        <div class="cover"><div class="cover-type"><span class="big">W&thinsp;F&thinsp;H</span><span class="rule"></span><span class="small">Case Study</span></div></div>
+        <div class="a-title">Westport Family Homes</div>
+        <div class="a-sub">Rebrand &middot; 2026</div>
+      </a>
+      <a class="album" data-cat="client" href="https://fragrance-shop-newyork.pages.dev" target="_blank" rel="noopener">
+        <div class="cover"><div class="cover-type"><span class="big">F&thinsp;S</span><span class="rule"></span><span class="small">Live Site</span></div></div>
+        <div class="a-title">The Fragrance Shop</div>
+        <div class="a-sub">New York &middot; 2026</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="uni-section about" aria-label="About">
+    <h2>About</h2>
+    <p>Marketing engineer. I build the systems that get people found — by Google, and now by AI. The work spans websites, answer engine optimization, automation, and the occasional dance record. Everything on this page was made with the tools I use for clients.</p>
+  </section>
+
+  <footer class="uni-footer">
+    <p>&copy; 2026 Josh Popkin</p>
+    <div class="foot-links">
+      <a href="https://www.linkedin.com/in/joshpaulpopkin/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://music.apple.com/us/artist/josh-popkin/1730161476" target="_blank" rel="noopener">Apple Music</a>
+      <a href="https://instagram.com/joshpopkinct" target="_blank" rel="noopener">Instagram</a>
+      <a href="/insights/">Insights</a>
+    </div>
+  </footer>
+</main>
+
+<!-- player -->
+<div id="playerbar" aria-label="Audio player">
+  <div class="pb-left">
+    <img src="assets/untouchable-cover.jpg" alt="">
+    <div><div class="pt">Untouchable</div><div class="ps">Josh Popkin</div></div>
   </div>
-</footer>
+  <div class="pb-mid">
+    <span class="pb-time" id="tCur">0:00</span>
+    <div class="pb-track" id="track"><div class="pb-rail"><div class="pb-fill" id="fill"></div></div></div>
+    <span class="pb-time total" id="tTot">3:04</span>
+  </div>
+  <button class="pb-play" id="pbPlay" aria-label="Play or pause">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>
+  </button>
+</div>
+<audio id="song" src="assets/untouchable.m4a" preload="none"></audio>
+
+<script>
+(function(){
+  var desktop=document.getElementById('desktop'),
+      folderWrap=document.getElementById('folderWrap'),
+      folder=document.getElementById('folder'),
+      hint=document.getElementById('hint'),
+      warp=document.getElementById('warp'),
+      universe=document.getElementById('universe'),
+      reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // hint after 4s of nothing
+  var hintTimer=setTimeout(function(){hint.classList.add('show')},4000);
+
+  // single click = Finder-style select; double click = open
+  folder.addEventListener('click',function(){folderWrap.classList.add('selected')});
+  folder.addEventListener('dblclick',openPortal);
+  folder.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openPortal();}});
+  // touch: double-tap
+  var lastTap=0;
+  folder.addEventListener('touchend',function(){
+    var now=Date.now();
+    if(now-lastTap<420){openPortal();}
+    lastTap=now;
+  });
+  document.querySelector('.skip').addEventListener('click',function(e){e.preventDefault();enterUniverse(true);});
+  if(location.hash==='#universe'){enterUniverse(true);}
+
+  var opened=false;
+  function openPortal(){
+    if(opened)return; opened=true;
+    clearTimeout(hintTimer);
+    if(reduced){enterUniverse(true);return;}
+    runWarp();
+  }
+
+  function enterUniverse(instant){
+    opened=true;
+    desktop.classList.add('gone');
+    warp.style.display='none';
+    universe.hidden=false;
+    void universe.offsetHeight; // force reflow so the fade actually transitions
+    universe.classList.add('on');
+    setTimeout(function(){desktop.remove();},600);
+    if(location.hash)history.replaceState(null,'',location.pathname);
+  }
+
+  /* ---- the wormhole: white world collapses into a black hole, stars streak, arrive in the void ---- */
+  function runWarp(){
+    var ctx=warp.getContext('2d'),DPR=Math.min(devicePixelRatio||1,2);
+    function size(){warp.width=innerWidth*DPR;warp.height=innerHeight*DPR;}
+    size();
+    warp.style.display='block';
+    var W=warp.width,H=warp.height,CX=W/2,CY=H/2;
+    var stars=[];
+    for(var i=0;i<420;i++){
+      var a=Math.random()*Math.PI*2, r=Math.random();
+      stars.push({a:a, r:0.05+r*1.1, s:0.4+Math.random()*1.2});
+    }
+    var t0=performance.now(), DUR=2300;
+    function ease(x){return x<0.4 ? 1.2*x*x : 0.192+ (x-0.4)*1.6+ (x-0.4)*(x-0.4)*1.4;}
+    function frame(now){
+      var t=Math.min((now-t0)/DUR,1);
+      var v=ease(t); // velocity/progress: slow … then fast
+      // background: white → dark as we fall in, then the light takes over
+      var bg=Math.max(0,1-v*1.15);
+      ctx.fillStyle='rgb('+(255*bg|0)+','+(255*bg|0)+','+(255*bg|0)+')';
+      ctx.fillRect(0,0,W,H);
+      // event horizon — light, so the fall ends on the white page
+      var hole=Math.min(v*v*Math.max(W,H)*0.9, Math.max(W,H));
+      var grad=ctx.createRadialGradient(CX,CY,0,CX,CY,Math.max(hole,1));
+      grad.addColorStop(0,'rgba(255,255,255,1)');
+      grad.addColorStop(0.8,'rgba(255,255,255,0.95)');
+      grad.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.fillStyle=grad;
+      ctx.beginPath();ctx.arc(CX,CY,Math.max(hole,1),0,7);ctx.fill();
+      // accretion ring glint (the folder blue, stretched around the hole)
+      if(t>0.12&&t<0.96){
+        ctx.strokeStyle='rgba(74,157,232,'+(0.5*Math.sin(Math.PI*t))+')';
+        ctx.lineWidth=2*DPR;
+        ctx.beginPath();ctx.arc(CX,CY,Math.max(hole*0.62,10),0,7);ctx.stroke();
+      }
+      // stars streaking inward
+      var R=Math.max(W,H)*0.75;
+      for(var i=0;i<stars.length;i++){
+        var st=stars[i];
+        var p=(st.r - v*st.s*0.9)%1.15; if(p<0)p+=1.15;
+        var d1=p*R, d2=Math.max(d1 - (6+v*90)*DPR*st.s,0);
+        var x1=CX+Math.cos(st.a)*d1, y1=CY+Math.sin(st.a)*d1;
+        var x2=CX+Math.cos(st.a)*d2, y2=CY+Math.sin(st.a)*d2;
+        var lum=bg>0.5?(40+60*(1-bg)):(200-120*v);
+        ctx.strokeStyle='rgba('+lum+','+lum+','+lum+','+(0.25+0.75*st.s/1.6)+')';
+        ctx.lineWidth=Math.max(st.s*DPR*(0.4+v),0.5);
+        ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+      }
+      // final wash: guarantee a clean white landing (corners the disc can't reach)
+      if(t>0.82){
+        ctx.fillStyle='rgba(255,255,255,'+Math.min((t-0.82)/0.18,1)+')';
+        ctx.fillRect(0,0,W,H);
+      }
+      if(t<1){requestAnimationFrame(frame);}
+      else{enterUniverse();}
+    }
+    desktop.classList.add('gone');
+    requestAnimationFrame(frame);
+  }
+
+  /* ---- the player ---- */
+  var song=document.getElementById('song'),
+      bar=document.getElementById('playerbar'),
+      pbPlay=document.getElementById('pbPlay'),
+      heroPlay=document.getElementById('heroPlay'),
+      rowPlayBtn=document.getElementById('rowPlayBtn'),
+      albumPlayBtn=document.getElementById('albumPlayBtn'),
+      rowSong=document.getElementById('rowSong'),
+      albumSong=document.getElementById('albumSong'),
+      fill=document.getElementById('fill'),
+      tCur=document.getElementById('tCur'),
+      tTot=document.getElementById('tTot'),
+      track=document.getElementById('track');
+  var PLAY='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg>',
+      PAUSE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></svg>';
+  function fmt(s){s=Math.max(0,s|0);return (s/60|0)+':'+('0'+(s%60)).slice(-2);}
+  function setIcons(playing){
+    [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].forEach(function(b){
+      b.innerHTML=playing?PAUSE:PLAY;
+      b.classList.toggle('playing',playing);
+    });
+  }
+  function toggle(e){
+    if(e){e.preventDefault();e.stopPropagation();}
+    if(song.paused){song.play();bar.classList.add('up');}
+    else{song.pause();}
+  }
+  song.addEventListener('play',function(){setIcons(true)});
+  song.addEventListener('pause',function(){setIcons(false)});
+  song.addEventListener('ended',function(){setIcons(false);song.currentTime=0;});
+  song.addEventListener('loadedmetadata',function(){tTot.textContent=fmt(song.duration)});
+  song.addEventListener('timeupdate',function(){
+    tCur.textContent=fmt(song.currentTime);
+    if(song.duration)fill.style.width=(100*song.currentTime/song.duration)+'%';
+  });
+  track.addEventListener('click',function(e){
+    var r=track.getBoundingClientRect();
+    if(song.duration)song.currentTime=song.duration*Math.min(Math.max((e.clientX-r.left)/r.width,0),1);
+  });
+  [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].forEach(function(b){b.addEventListener('click',toggle)});
+  rowSong.addEventListener('click',toggle);
+  rowSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});
+  albumSong.addEventListener('click',toggle);
+  albumSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});
+
+  /* ---- category pills ---- */
+  var pills=document.querySelectorAll('.pill'),albums=document.querySelectorAll('.album');
+  pills.forEach(function(p){
+    p.addEventListener('click',function(){
+      pills.forEach(function(q){q.setAttribute('aria-pressed','false')});
+      p.setAttribute('aria-pressed','true');
+      var cat=p.dataset.cat;
+      albums.forEach(function(a){a.classList.toggle('hide',cat!=='all'&&a.dataset.cat!==cat)});
+    });
+  });
+})();
+</script>
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Person",
-      "@id":"https://joshpopkin.com/#josh-popkin",
-      "name":"Josh Popkin",
-      "alternateName":"Joshua Paul Popkin",
-      "url":"https://joshpopkin.com/",
-      "mainEntityOfPage":"https://joshpopkin.com/about/",
-      "jobTitle":"Marketing Engineer",
-      "description":"Josh Popkin is a marketing engineer in New York City who rebuilds small-business websites so that people and AI assistants can find, understand and recommend them.",
-      "knowsAbout":["Answer Engine Optimization","AI Search Visibility","Search Engine Optimization","Marketing Engineering","Marketing Automation","Website Architecture","Structured Data","Brand Positioning"],
-      "alumniOf":[
-        {"@type":"CollegeOrUniversity","name":"Cornell Tech","sameAs":"https://en.wikipedia.org/wiki/Cornell_Tech"},
-        {"@type":"CollegeOrUniversity","name":"Bucknell University","sameAs":"https://en.wikipedia.org/wiki/Bucknell_University"}
-      ],
-      "homeLocation":{"@type":"Place","name":"New York City"},
-      "address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},
-      "image":{"@type":"ImageObject","@id":"https://joshpopkin.com/#portrait","url":"https://joshpopkin.com/assets/josh-popkin.jpg","caption":"Josh Popkin, marketing engineer, New York City","width":800,"height":800},
-      "sameAs":[
-        "https://www.linkedin.com/in/joshpaulpopkin/",
-        "https://instagram.com/joshpopkinct",
-        "https://music.apple.com/us/artist/josh-popkin/1730161476",
-        "https://www.tiktok.com/@joshpaulpopkin",
-        "https://www.youtube.com/@joshpopkinyoutube",
-        "https://www.joshpaulpopkin.com"
-      ]
-    },
-    {
-      "@type":"WebSite",
-      "@id":"https://joshpopkin.com/#website",
-      "url":"https://joshpopkin.com/",
-      "name":"Josh Popkin",
-      "inLanguage":"en-US",
-      "publisher":{"@id":"https://joshpopkin.com/#josh-popkin"}
-    },
-    {
-      "@type":"WebPage",
-      "@id":"https://joshpopkin.com/#webpage",
-      "url":"https://joshpopkin.com/",
-      "name":"Josh Popkin — Marketing Engineer, New York City",
-      "isPartOf":{"@id":"https://joshpopkin.com/#website"},
-      "about":{"@id":"https://joshpopkin.com/#josh-popkin"},
-      "primaryImageOfPage":{"@id":"https://joshpopkin.com/#portrait"},
-      "dateModified":"2026-07-25"
-    },
-    {
-      "@type":"Service",
-      "@id":"https://joshpopkin.com/#rebuild",
-      "name":"Small-business website rebuild",
-      "serviceType":"Website rebuild and answer engine optimization",
-      "description":"Josh Popkin rebuilds websites for small businesses at no financial cost, restructuring them so that people and AI assistants can find, understand and recommend the business. Payment is an honest testimonial.",
-      "provider":{"@id":"https://joshpopkin.com/#josh-popkin"},
-      "areaServed":{"@type":"City","name":"New York City"},
-      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
-    },
-    {
-      "@type":"DefinedTerm",
-      "@id":"https://joshpopkin.com/#aeo",
-      "name":"Answer Engine Optimization",
-      "alternateName":"AEO",
-      "description":"Answer Engine Optimization (AEO) is the practice of improving how AI systems such as ChatGPT, Google AI Overviews, Gemini, Claude and Perplexity understand, reference and recommend a company, product or person."
-    },
-    {
-      "@type":"FAQPage",
-      "@id":"https://joshpopkin.com/#faq",
-      "isPartOf":{"@id":"https://joshpopkin.com/#webpage"},
-      "mainEntity":[
-        {"@type":"Question","name":"Who is Josh Popkin?","url":"https://joshpopkin.com/#q-who","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin is a marketing engineer based in New York City. He works on answer engine optimization, search optimization, website architecture and marketing automation, and he rebuilds websites for small businesses at no charge. He holds an MBA from Cornell Tech and a degree from Bucknell University, wrote the marketing book Play Offense, and releases music under his own name."}},
-        {"@type":"Question","name":"What is a marketing engineer?","url":"https://joshpopkin.com/#q-marketing-engineer","acceptedAnswer":{"@type":"Answer","text":"A marketing engineer builds the systems behind marketing rather than only the campaigns: websites, structured data, automation, and the measurement that shows whether any of it worked. Josh Popkin's version of the role centres on discovery — making sure that when someone asks about a business, in Google or in an AI assistant, the answer that comes back is accurate and persuasive."}},
-        {"@type":"Question","name":"What is answer engine optimization?","url":"https://joshpopkin.com/#q-aeo","acceptedAnswer":{"@type":"Answer","text":"Answer engine optimization (AEO) is the practice of improving how AI systems such as ChatGPT, Google AI Overviews, Gemini, Claude and Perplexity understand, reference and recommend a business. Traditional SEO competes for a position in a list of links. AEO competes to be part of the answer itself."}},
-        {"@type":"Question","name":"Does Josh Popkin really rebuild websites for free?","url":"https://joshpopkin.com/#q-free","acceptedAnswer":{"@type":"Answer","text":"Yes. Josh Popkin rebuilds websites for small businesses at no financial cost. He asks only for an honest public testimonial if the owner believes the work deserves one."}},
-        {"@type":"Question","name":"Where did Josh Popkin go to school?","url":"https://joshpopkin.com/#q-education","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin earned an MBA from Cornell Tech in 2025 and a business degree from Bucknell University in 2018, where he founded the university's first stand-up comedy club."}},
-        {"@type":"Question","name":"Did Josh Popkin do stand-up comedy?","url":"https://joshpopkin.com/#q-comedy","acceptedAnswer":{"@type":"Answer","text":"Yes. Josh Popkin performed stand-up comedy from 2013 to 2020, founded Bucknell University's first stand-up comedy club, built an audience of more than 3.5 million followers on TikTok, and appeared on the Kill Tony podcast. He no longer performs."}},
-        {"@type":"Question","name":"Is Josh Popkin a musician?","url":"https://joshpopkin.com/#q-music","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin releases music under his own name on Spotify and Apple Music, most recently the single Untouchable. He describes himself as a marketing engineer rather than a professional musician; the music is where he tests creative AI tools before recommending them to clients."}},
-        {"@type":"Question","name":"How do you get in touch with Josh Popkin?","url":"https://joshpopkin.com/#q-hire","acceptedAnswer":{"@type":"Answer","text":"Email jpp234@cornell.edu. Josh Popkin takes on a small number of free rebuilds at a time, and prioritises independent businesses in New York City."}}
-      ]
-    },
-    {
-      "@type":"ItemList",
-      "@id":"https://joshpopkin.com/#articles",
-      "name":"Insights by Josh Popkin",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"url":"https://joshpopkin.com/insights/josh-popkin-aeo-strategy-guide/","name":"AEO Strategy: A Beginner's Guide to Answer Engine Optimization"},
-        {"@type":"ListItem","position":2,"url":"https://joshpopkin.com/insights/did-josh-popkin-do-stand-up-comedy/","name":"Did Josh Popkin Do Stand-Up Comedy?"},
-        {"@type":"ListItem","position":3,"url":"https://joshpopkin.com/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/","name":"Why Cornell Tech Changed How Josh Popkin Thinks About Technology"},
-        {"@type":"ListItem","position":4,"url":"https://joshpopkin.com/insights/who-is-josh-popkin/","name":"Who Is Josh Popkin?"}
-      ]
-    }
-  ]
+  "@type":"Person",
+  "@id":"https://joshpopkin.com/#josh-popkin",
+  "name":"Josh Popkin",
+  "url":"https://joshpopkin.com",
+  "jobTitle":"Marketing Engineer",
+  "description":"Josh Popkin is a marketing engineer specializing in AI-powered marketing, answer engine optimization (AEO), SEO, automation, and creative technology.",
+  "knowsAbout":["Marketing Engineering","Answer Engine Optimization","SEO","Marketing Automation","AI Tools","AI Music"],
+  "alumniOf":[{"@type":"CollegeOrUniversity","name":"Cornell Tech"},{"@type":"CollegeOrUniversity","name":"Bucknell University"}],
+  "address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY"},
+  "image":{"@type":"ImageObject","url":"https://joshpopkin.com/assets/josh-popkin.jpg","caption":"Josh Popkin"},
+  "sameAs":["https://instagram.com/joshpopkinct","https://www.linkedin.com/in/joshpaulpopkin/","https://music.apple.com/us/artist/josh-popkin/1730161476","https://www.tiktok.com/@joshpaulpopkin","https://www.tiktok.com/@.popkin","https://www.youtube.com/@joshpopkinyoutube","https://www.joshpaulpopkin.com"]
 }
-</script>
-
-<script>
-/* Highlights the current section in the rail. Progressive enhancement only —
-   every anchor and all content works with JavaScript disabled. */
-(function(){
-  var links = [].slice.call(document.querySelectorAll('.rail a'));
-  var map = {};
-  links.forEach(function(a){
-    var el = document.querySelector(a.getAttribute('href'));
-    if (el) map[a.getAttribute('href').slice(1)] = a;
-  });
-  if (!('IntersectionObserver' in window)) return;
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      var a = map[e.target.id];
-      if (!a) return;
-      if (e.isIntersecting){
-        links.forEach(function(l){ l.classList.remove('is-current'); });
-        a.classList.add('is-current');
-      }
-    });
-  }, {rootMargin:'-96px 0px -65% 0px'});
-  Object.keys(map).forEach(function(id){
-    var el = document.getElementById(id); if (el) io.observe(el);
-  });
-})();
 </script>
 </body>
 </html>
