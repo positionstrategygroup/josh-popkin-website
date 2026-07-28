@@ -114,35 +114,6 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .row .rowplay svg{width:11px;height:11px;margin-left:1px}
 .row .rowplay.playing svg{margin-left:0}
 
-/* Discography */
-.pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
-.pill{
-  font:12px var(--mono);letter-spacing:.08em;color:var(--soft);
-  border:1px solid var(--line);border-radius:999px;padding:8px 16px;transition:all .25s;
-}
-.pill:hover{border-color:var(--ink);color:var(--ink)}
-.pill[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.disco{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:28px}
-.album{display:flex;flex-direction:column;gap:12px;border-radius:6px;padding:0;transition:opacity .3s}
-.album.hide{display:none}
-.album .cover{position:relative;aspect-ratio:1/1;border-radius:4px;overflow:hidden;background:var(--wash);border:1px solid var(--line)}
-.album .cover img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
-.album:hover .cover img{transform:scale(1.04)}
-.cover-type{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
-.cover-type .big{font:400 44px var(--serif);letter-spacing:.1em}
-.cover-type .rule{width:34px;height:1px;background:#c9c9c9}
-.cover-type .small{font:10px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--ghost)}
-.album .a-title{font-size:16px;line-height:1.35}
-.album .a-sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase}
-.album .cover .hoverplay{
-  position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;
-  background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
-  opacity:0;transform:translateY(6px);transition:all .25s ease;
-}
-.album:hover .cover .hoverplay,.album .cover .hoverplay.playing{opacity:1;transform:none}
-.album .cover .hoverplay svg{width:14px;height:14px;margin-left:1px}
-.album .cover .hoverplay.playing svg{margin-left:0}
-
 /* About + footer */
 .about p{color:var(--soft);font-size:18px;line-height:1.65;max-width:62ch}
 .about a{border-bottom:1px solid #c9c9c9;transition:border-color .3s}
@@ -293,65 +264,6 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section class="uni-section" aria-label="Discography">
-    <h2>Discography</h2>
-    <div class="pills" role="group" aria-label="Filter by category">
-      <button class="pill" data-cat="all" aria-pressed="true">All</button>
-      <button class="pill" data-cat="music" aria-pressed="false">Music</button>
-      <button class="pill" data-cat="ai" aria-pressed="false">AI &amp; Marketing</button>
-      <button class="pill" data-cat="client" aria-pressed="false">Client work</button>
-    </div>
-    <div class="disco">
-      <div class="album" data-cat="music" id="albumSong" tabindex="0" role="button" aria-label="Play Untouchable">
-        <div class="cover">
-          <img src="assets/untouchable-cover.jpg" alt="Untouchable album cover">
-          <span class="hoverplay" id="albumPlayBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></span>
-        </div>
-        <div class="a-title">Untouchable</div>
-        <div class="a-sub">Single &middot; 2026</div>
-      </div>
-      <a class="album" data-cat="ai" href="/insights/aeo-case-study-home-builder/">
-        <div class="cover"><img src="assets/josh-popkin-portrait.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization"></div>
-        <div class="a-title">AI Visibility Case Study: Home Builder</div>
-        <div class="a-sub">Article &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="ai" href="/insights/josh-popkin-carter-agency-faq/">
-        <div class="cover"><img src="assets/josh-popkin-portrait.jpg" alt="Josh Popkin, marketing engineer and co-founder of Carter-Agency"></div>
-        <div class="a-title">Josh Popkin &amp; Carter-Agency: FAQ</div>
-        <div class="a-sub">Article &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="ai" href="/insights/who-is-josh-popkin/">
-        <div class="cover"><img src="assets/abstract-cover.jpg" alt="Who Is Josh Popkin article cover"></div>
-        <div class="a-title">Who Is Josh Popkin?</div>
-        <div class="a-sub">Article &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="ai" href="/insights/did-josh-popkin-do-stand-up-comedy/">
-        <div class="cover"><img src="assets/josh-popkin.jpg" alt="Josh Popkin, former stand-up comedian and marketing engineer, holding his dog"></div>
-        <div class="a-title">Did Josh Popkin Do Stand-Up Comedy?</div>
-        <div class="a-sub">Article &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="ai" href="/insights/josh-popkin-aeo-strategy-guide/">
-        <div class="cover"><img src="assets/josh-popkin.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization, holding his dog"></div>
-        <div class="a-title">AEO Strategy: A Beginner's Guide</div>
-        <div class="a-sub">Article &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="ai" href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">
-        <div class="cover"><div class="cover-type"><span class="big">C&thinsp;T</span><span class="rule"></span><span class="small">Article</span></div></div>
-        <div class="a-title">Why Cornell Tech Changed How Josh Popkin Thinks</div>
-        <div class="a-sub">Article &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="client" href="https://www.westportfamilyhomes.com/insights/josh-popkin-westport-family-homes-website-rebrand/" target="_blank" rel="noopener">
-        <div class="cover"><div class="cover-type"><span class="big">W&thinsp;F&thinsp;H</span><span class="rule"></span><span class="small">Case Study</span></div></div>
-        <div class="a-title">Westport Family Homes</div>
-        <div class="a-sub">Rebrand &middot; 2026</div>
-      </a>
-      <a class="album" data-cat="client" href="https://fragrance-shop-newyork.pages.dev" target="_blank" rel="noopener">
-        <div class="cover"><div class="cover-type"><span class="big">F&thinsp;S</span><span class="rule"></span><span class="small">Live Site</span></div></div>
-        <div class="a-title">The Fragrance Shop</div>
-        <div class="a-sub">New York &middot; 2026</div>
-      </a>
-    </div>
-  </section>
 
   <section class="uni-section about" aria-label="About">
     <h2>About</h2>
@@ -509,7 +421,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
       PAUSE='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></svg>';
   function fmt(s){s=Math.max(0,s|0);return (s/60|0)+':'+('0'+(s%60)).slice(-2);}
   function setIcons(playing){
-    [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].forEach(function(b){
+    [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].filter(Boolean).forEach(function(b){
       b.innerHTML=playing?PAUSE:PLAY;
       b.classList.toggle('playing',playing);
     });
@@ -531,22 +443,11 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     var r=track.getBoundingClientRect();
     if(song.duration)song.currentTime=song.duration*Math.min(Math.max((e.clientX-r.left)/r.width,0),1);
   });
-  [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].forEach(function(b){b.addEventListener('click',toggle)});
+  [pbPlay,heroPlay,rowPlayBtn,albumPlayBtn].filter(Boolean).forEach(function(b){b.addEventListener('click',toggle)});
   rowSong.addEventListener('click',toggle);
   rowSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});
-  albumSong.addEventListener('click',toggle);
-  albumSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});
-
-  /* ---- category pills ---- */
-  var pills=document.querySelectorAll('.pill'),albums=document.querySelectorAll('.album');
-  pills.forEach(function(p){
-    p.addEventListener('click',function(){
-      pills.forEach(function(q){q.setAttribute('aria-pressed','false')});
-      p.setAttribute('aria-pressed','true');
-      var cat=p.dataset.cat;
-      albums.forEach(function(a){a.classList.toggle('hide',cat!=='all'&&a.dataset.cat!==cat)});
-    });
-  });
+  if(albumSong){albumSong.addEventListener('click',toggle);
+  albumSong.addEventListener('keydown',function(e){if(e.key==='Enter')toggle(e)});}
 })();
 </script>
 
