@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
       <image:title>Josh Popkin, marketing engineer in New York City</image:title>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
       <image:title>Josh Popkin</image:title>
@@ -20,11 +20,11 @@
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/who-is-josh-popkin/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <image:image>
-      <image:loc>https://joshpopkin.com/assets/untouchable-cover.jpg</image:loc>
-      <image:title>Untouchable by Josh Popkin</image:title>
-      <image:caption>Cover art for "Untouchable," written and produced by Josh Popkin.</image:caption>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin-tuxedo-wedding-2025.jpg</image:loc>
+      <image:title>Josh Popkin</image:title>
+      <image:caption>Josh Popkin wearing tuxedo at wedding in 2025.</image:caption>
     </image:image>
   </url>
   <url>
