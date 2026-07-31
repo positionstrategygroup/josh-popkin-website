@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://joshpopkin.com/insights/how-does-answer-engine-optimization-work/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <image:image>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin-steakhouse-dinner-manhattan.jpg</image:loc>
+      <image:title>Josh Popkin</image:title>
+      <image:caption>Josh Popkin at fancy steakhouse dinner in Manhattan.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
       <image:title>Josh Popkin, marketing engineer in New York City</image:title>
@@ -11,7 +20,7 @@
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
       <image:title>Josh Popkin</image:title>
