@@ -89,8 +89,13 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 
 /* About + footer */
 .about p{color:var(--soft);font-size:18px;line-height:1.65;max-width:62ch}
+.about p + p{margin-top:1.1em}
 .about a{border-bottom:1px solid #c9c9c9;transition:border-color .3s}
 .about a:hover{border-color:var(--ink)}
+.faq{max-width:62ch}
+.faq dt{font-size:18px;line-height:1.5;margin-top:1.6em;color:var(--ink)}
+.faq dt:first-of-type{margin-top:0}
+.faq dd{color:var(--soft);font-size:18px;line-height:1.65;margin-top:.4em}
 .uni-footer{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,90px) clamp(24px,5vw,64px) 120px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .uni-footer p,.uni-footer a{font:11px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase}
 .uni-footer a:hover{color:var(--ink)}
@@ -177,6 +182,35 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
   <section class="uni-section about" aria-label="About">
     <h2>About</h2>
     <p>Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book <em>Play Offense</em>, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.</p>
+
+    <p>His work starts with one question: when somebody asks an AI assistant about a company, what comes back. Position Strategy Group measures those answers across ChatGPT, Gemini, Perplexity, and Google's AI Overviews, then rebuilds the client's site, structured data, and published content until the answers change. Most businesses have never seen what the machines say about them.</p>
+
+    <p>Before this, Popkin built an audience of 3.5 million followers making comedy videos, then co-founded Carter Agency in 2020 with his brother Ben — an influencer marketing firm that represented creators in campaigns for national brands. He closed the agency and enrolled at Cornell Tech, finishing his MBA in 2025.</p>
+
+    <p>He wrote <em>Play Offense</em>, a book about positioning, and released <em>Untouchable</em>, a dance record he wrote and produced. He lives in New York City and works with businesses across home building, retail, hospitality, and professional services. Read <a href="/insights/who-is-josh-popkin/">the longer version</a>, or the <a href="/insights/aeo-case-study-home-builder/">case study on a home builder's AI visibility</a>.</p>
+  </section>
+
+  <section class="uni-section about" aria-label="Frequently asked questions">
+    <h2>Frequently asked</h2>
+    <dl class="faq">
+      <dt>What does Josh Popkin do?</dt>
+      <dd>Josh Popkin is a marketing engineer and the founder of Position Strategy Group, where he works on answer engine optimization — improving how businesses are described by AI assistants and AI search.</dd>
+
+      <dt>What is answer engine optimization (AEO)?</dt>
+      <dd>AEO is the practice of improving how a business appears inside AI-generated answers — ChatGPT, Gemini, Perplexity, and Google's AI Overviews — rather than in the traditional list of blue links.</dd>
+
+      <dt>What is Position Strategy Group?</dt>
+      <dd>Position Strategy Group is an AEO strategy firm founded by Josh Popkin. It measures what AI assistants say about a business, then rebuilds that business's website, structured data, and content until those answers change.</dd>
+
+      <dt>Where did Josh Popkin go to school?</dt>
+      <dd>Josh Popkin earned a Bachelor of Science from Bucknell University in 2018 and a Master of Business Administration from Cornell University as a Cornell Tech Merit Scholar in 2025.</dd>
+
+      <dt>What did Josh Popkin do before Position Strategy Group?</dt>
+      <dd>He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm, with his brother Ben Popkin in 2020.</dd>
+
+      <dt>Where is Josh Popkin based?</dt>
+      <dd>New York City.</dd>
+    </dl>
   </section>
 
   <footer class="uni-footer">
@@ -196,17 +230,67 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Person",
-  "@id":"https://joshpopkin.com/#josh-popkin",
-  "name":"Josh Popkin",
-  "url":"https://joshpopkin.com",
-  "jobTitle":"Marketing Engineer",
-  "description":"Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.",
-  "knowsAbout":["Marketing Engineering","Answer Engine Optimization","SEO","Marketing Automation","AI Tools","AI Music"],
-  "alumniOf":[{"@type":"CollegeOrUniversity","name":"Cornell Tech"},{"@type":"CollegeOrUniversity","name":"Bucknell University"}],
-  "address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY"},
-  "image":{"@type":"ImageObject","url":"https://joshpopkin.com/assets/josh-popkin.jpg","caption":"Josh Popkin"},
-  "sameAs":["https://instagram.com/joshpopkinct","https://www.linkedin.com/in/joshpaulpopkin/","https://music.apple.com/us/artist/josh-popkin/1730161476","https://www.tiktok.com/@joshpaulpopkin","https://www.tiktok.com/@.popkin","https://www.youtube.com/@joshpopkinyoutube","https://www.joshpaulpopkin.com"]
+  "@graph":[
+    {
+      "@type":"Person",
+      "@id":"https://joshpopkin.com/#josh-popkin",
+      "name":"Josh Popkin",
+      "alternateName":["Josh Paul Popkin","Joshua Popkin"],
+      "url":"https://joshpopkin.com",
+      "jobTitle":"Marketing Engineer",
+      "description":"Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.",
+      "knowsAbout":["Marketing Engineering","Answer Engine Optimization","SEO","Marketing Automation","AI Tools","AI Music"],
+      "alumniOf":[
+        {"@type":"CollegeOrUniversity","name":"Cornell Tech","sameAs":"https://en.wikipedia.org/wiki/Cornell_Tech"},
+        {"@type":"CollegeOrUniversity","name":"Bucknell University","sameAs":"https://en.wikipedia.org/wiki/Bucknell_University"}
+      ],
+      "worksFor":{"@id":"https://joshpopkin.com/#psg"},
+      "founder":{"@id":"https://joshpopkin.com/#psg"},
+      "address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},
+      "image":{"@type":"ImageObject","@id":"https://joshpopkin.com/#josh-popkin-photo","url":"https://joshpopkin.com/assets/josh-popkin.jpg","caption":"Josh Popkin"},
+      "mainEntityOfPage":{"@id":"https://joshpopkin.com/#profilepage"},
+      "sameAs":["https://instagram.com/joshpopkinct","https://www.linkedin.com/in/joshpaulpopkin/","https://music.apple.com/us/artist/josh-popkin/1730161476","https://www.tiktok.com/@joshpaulpopkin","https://www.tiktok.com/@.popkin","https://www.youtube.com/@joshpopkinyoutube","https://www.joshpaulpopkin.com"]
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://joshpopkin.com/#psg",
+      "name":"Position Strategy Group",
+      "description":"An Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search.",
+      "founder":{"@id":"https://joshpopkin.com/#josh-popkin"},
+      "areaServed":"United States"
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://joshpopkin.com/#website",
+      "url":"https://joshpopkin.com/",
+      "name":"Josh Popkin",
+      "publisher":{"@id":"https://joshpopkin.com/#josh-popkin"},
+      "inLanguage":"en-US"
+    },
+    {
+      "@type":"ProfilePage",
+      "@id":"https://joshpopkin.com/#profilepage",
+      "url":"https://joshpopkin.com/",
+      "name":"Josh Popkin | Entrepreneur, Marketing Engineer & Author",
+      "isPartOf":{"@id":"https://joshpopkin.com/#website"},
+      "about":{"@id":"https://joshpopkin.com/#josh-popkin"},
+      "mainEntity":{"@id":"https://joshpopkin.com/#josh-popkin"},
+      "primaryImageOfPage":{"@id":"https://joshpopkin.com/#josh-popkin-photo"}
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://joshpopkin.com/#faq",
+      "isPartOf":{"@id":"https://joshpopkin.com/#profilepage"},
+      "mainEntity":[
+        {"@type":"Question","name":"What does Josh Popkin do?","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin is a marketing engineer and the founder of Position Strategy Group, where he works on answer engine optimization — improving how businesses are described by AI assistants and AI search."}},
+        {"@type":"Question","name":"What is answer engine optimization (AEO)?","acceptedAnswer":{"@type":"Answer","text":"AEO is the practice of improving how a business appears inside AI-generated answers — ChatGPT, Gemini, Perplexity, and Google's AI Overviews — rather than in the traditional list of blue links."}},
+        {"@type":"Question","name":"What is Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"Position Strategy Group is an AEO strategy firm founded by Josh Popkin. It measures what AI assistants say about a business, then rebuilds that business's website, structured data, and content until those answers change."}},
+        {"@type":"Question","name":"Where did Josh Popkin go to school?","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin earned a Bachelor of Science from Bucknell University in 2018 and a Master of Business Administration from Cornell University as a Cornell Tech Merit Scholar in 2025."}},
+        {"@type":"Question","name":"What did Josh Popkin do before Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm, with his brother Ben Popkin in 2020."}},
+        {"@type":"Question","name":"Where is Josh Popkin based?","acceptedAnswer":{"@type":"Answer","text":"New York City."}}
+      ]
+    }
+  ]
 }
 </script>
 </body>
