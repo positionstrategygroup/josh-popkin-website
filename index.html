@@ -88,19 +88,24 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .row .right{font:13px var(--mono);color:var(--ghost);display:flex;align-items:center;gap:14px}
 
 /* About + footer */
-.about p{color:var(--soft);font-size:18px;line-height:1.65;max-width:62ch}
-.about p + p{margin-top:1.1em}
-.about a{border-bottom:1px solid #c9c9c9;transition:border-color .3s}
-.about a:hover{border-color:var(--ink)}
-.faq{max-width:62ch}
-.faq dt{font-size:18px;line-height:1.5;margin-top:1.6em;color:var(--ink)}
+.about h2{font-size:clamp(18px,1.6vw,21px);margin-bottom:16px;color:var(--soft)}
+.about .cols{columns:2;column-gap:52px;max-width:none}
+.about p{color:var(--ghost);font-size:14.5px;line-height:1.62;max-width:none;break-inside:avoid}
+.about p + p{margin-top:1em}
+.about a{border-bottom:1px solid #d8d8d8;transition:border-color .3s,color .3s}
+.about a:hover{border-color:var(--ink);color:var(--ink)}
+.faq{max-width:none;columns:2;column-gap:52px}
+.faq dt{font-size:14.5px;line-height:1.45;margin-top:1.4em;color:var(--soft);break-after:avoid}
 .faq dt:first-of-type{margin-top:0}
-.faq dd{color:var(--soft);font-size:18px;line-height:1.65;margin-top:.4em}
+.faq dd{color:var(--ghost);font-size:14.5px;line-height:1.62;margin-top:.3em;break-inside:avoid;margin-bottom:.2em}
 .uni-footer{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,90px) clamp(24px,5vw,64px) 120px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .uni-footer p,.uni-footer a{font:11px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase}
 .uni-footer a:hover{color:var(--ink)}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap}
 
+@media (max-width:860px){
+  .about .cols,.faq{columns:1}
+}
 @media (max-width:680px){
   .row{grid-template-columns:20px 44px 1fr}
   .row .right{display:none}
@@ -187,13 +192,13 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 
   <section class="uni-section about" aria-label="About">
     <h2>About</h2>
-    <p>Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book <em>Play Offense</em>, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.</p>
+    <div class="cols"><p>Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book <em>Play Offense</em>, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.</p>
 
     <p>His work starts with one question: when somebody asks an AI assistant about a company, what comes back. Position Strategy Group measures those answers across ChatGPT, Gemini, Perplexity, and Google's AI Overviews, then rebuilds the client's site, structured data, and published content until the answers change. Most businesses have never seen what the machines say about them.</p>
 
-    <p>Before this, Popkin built an audience of 3.5 million followers making comedy videos, then co-founded Carter Agency in 2020 with his brother Ben — an influencer marketing firm that represented creators in campaigns for national brands. He closed the agency and enrolled at Cornell Tech, finishing his MBA in 2025.</p>
+    <p>Before this, Popkin built an audience of 3.5 million followers making comedy videos, then co-founded Carter Agency in 2020 with his brother Ben — an influencer marketing firm that executed influencer campaigns for Amazon, Apple and Google. He closed the agency and enrolled at Cornell Tech, finishing his MBA in 2025.</p>
 
-    <p>He wrote <em>Play Offense</em>, a book about positioning, and released <em>Untouchable</em>, a dance record he wrote and produced. He lives in New York City and works with businesses across home building, retail, hospitality, and professional services. Read <a href="/insights/who-is-josh-popkin/">the longer version</a>, or the <a href="/insights/aeo-case-study-home-builder/">case study on a home builder's AI visibility</a>.</p>
+    <p>He wrote <em>Play Offense</em>, a book about positioning. He lives in New York City and works with businesses across home building, retail, hospitality, and professional services. Read <a href="/insights/who-is-josh-popkin/">the longer version</a>, or the <a href="/insights/aeo-case-study-home-builder/">case study on a home builder's AI visibility</a>.</p></div>
   </section>
 
   <section class="uni-section about" aria-label="Frequently asked questions">
@@ -212,7 +217,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
       <dd>Josh Popkin earned a Bachelor of Science from Bucknell University in 2018 and a Master of Business Administration from Cornell University as a Cornell Tech Merit Scholar in 2025.</dd>
 
       <dt>What did Josh Popkin do before Position Strategy Group?</dt>
-      <dd>He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm, with his brother Ben Popkin in 2020.</dd>
+      <dd>He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm that executed influencer campaigns for Amazon, Apple and Google, with his brother Ben Popkin in 2020.</dd>
 
       <dt>Where is Josh Popkin based?</dt>
       <dd>New York City.</dd>
@@ -292,7 +297,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         {"@type":"Question","name":"What is answer engine optimization (AEO)?","acceptedAnswer":{"@type":"Answer","text":"AEO is the practice of improving how a business appears inside AI-generated answers — ChatGPT, Gemini, Perplexity, and Google's AI Overviews — rather than in the traditional list of blue links."}},
         {"@type":"Question","name":"What is Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"Position Strategy Group is an AEO strategy firm founded by Josh Popkin. It measures what AI assistants say about a business, then rebuilds that business's website, structured data, and content until those answers change."}},
         {"@type":"Question","name":"Where did Josh Popkin go to school?","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin earned a Bachelor of Science from Bucknell University in 2018 and a Master of Business Administration from Cornell University as a Cornell Tech Merit Scholar in 2025."}},
-        {"@type":"Question","name":"What did Josh Popkin do before Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm, with his brother Ben Popkin in 2020."}},
+        {"@type":"Question","name":"What did Josh Popkin do before Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm that executed influencer campaigns for Amazon, Apple and Google, with his brother Ben Popkin in 2020."}},
         {"@type":"Question","name":"Where is Josh Popkin based?","acceptedAnswer":{"@type":"Answer","text":"New York City."}}
       ]
     }
