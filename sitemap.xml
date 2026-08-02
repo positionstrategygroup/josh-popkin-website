@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://joshpopkin.com/insights/how-can-small-businesses-use-ai/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <image:image>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin-nyc-skyline-rooftop.jpg</image:loc>
+      <image:title>Josh Popkin</image:title>
+      <image:caption>Josh Popkin on a Manhattan rooftop overlooking the New York City skyline.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin-headshot-nyc-rooftop.jpg</image:loc>
+      <image:title>Josh Popkin</image:title>
+      <image:caption>Josh Popkin, marketing engineer and founder of Position Strategy Group.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://joshpopkin.com/insights/how-does-answer-engine-optimization-work/</loc>
     <lastmod>2026-07-31</lastmod>
     <image:image>
@@ -11,7 +25,7 @@
   </url>
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
       <image:title>Josh Popkin, marketing engineer in New York City</image:title>
@@ -20,7 +34,7 @@
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <image:image>
       <image:loc>https://joshpopkin.com/assets/josh-popkin.jpg</image:loc>
       <image:title>Josh Popkin</image:title>
