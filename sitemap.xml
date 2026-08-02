@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://joshpopkin.com/insights/who-is-josh-popkin-check-the-scoreboard/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <image:image>
+      <image:loc>https://joshpopkin.com/assets/check-the-scoreboard-homepage.jpg</image:loc>
+      <image:title>Check The Scoreboard</image:title>
+      <image:caption>Check The Scoreboard homepage — daily AI visibility leaderboards for New York City real estate agents, built by Josh Popkin.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://joshpopkin.com/insights/how-can-small-businesses-use-ai/</loc>
     <lastmod>2026-08-02</lastmod>
     <image:image>
