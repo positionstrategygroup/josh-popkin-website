@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&display=swap" rel="stylesheet">
 <title>Josh Popkin | Entrepreneur, Marketing Engineer &amp; Author</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png">
@@ -28,6 +31,7 @@
   --soft:#3d3d3d; --wash:#f4f4f2;
   --folder-hi:#6FBBF7; --folder-lo:#3F8FE0; --accent:#4A9DE8;
   --serif:"Times New Roman",Times,serif;
+  --display:'Newsreader',Georgia,serif;
   --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -59,7 +63,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .verified{font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ghost);display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .verified .dot{width:16px;height:16px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none}
 .verified .dot svg{width:9px;height:9px}
-.uni-name{font-weight:400;font-size:clamp(52px,10vw,118px);line-height:.95;letter-spacing:-.02em}
+.uni-name{font-family:var(--display);font-weight:400;font-size:clamp(52px,10vw,118px);line-height:.95;letter-spacing:-.02em}
 .uni-meta{font:13px var(--mono);color:var(--ghost);margin-top:16px;letter-spacing:.04em}
 .uni-actions{margin-top:22px;display:flex;align-items:center;gap:18px}
 .uni-actions .cta{font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);border:1px solid var(--line);padding:12px 18px;border-radius:999px;transition:border-color .3s,color .3s}
