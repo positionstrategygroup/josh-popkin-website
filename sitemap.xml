@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://joshpopkin.com/insights/how-price-changes-consumer-perceived-value/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <image:image>
+      <image:loc>https://joshpopkin.com/assets/josh-popkin-2026-portrait.jpg</image:loc>
+      <image:title>Josh Popkin</image:title>
+      <image:caption>Josh Popkin, marketing engineer and founder of Position Strategy Group.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://joshpopkin.com/insights/who-is-josh-popkin-check-the-scoreboard/</loc>
     <lastmod>2026-08-02</lastmod>
     <image:image>
