@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Disallow: /assets/thumbs/
+Disallow: /favicon.ico
+Disallow: /icon-96.png
+Disallow: /icon-192.png
+Disallow: /apple-touch-icon.png
+
 Sitemap: https://joshpopkin.com/sitemap.xml
