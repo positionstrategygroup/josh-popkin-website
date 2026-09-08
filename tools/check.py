@@ -36,7 +36,13 @@ def get(p):
     return open(p, encoding="utf-8").read()
 
 def asset(ref):
-    """Return (ok, dims, bytes) for an asset reference."""
+    """Return (ok, dims, bytes) for an asset reference.
+
+    In local mode an absolute URL on our own domain resolves to the local file,
+    so a not-yet-deployed asset is not reported as a 404.
+    """
+    if not LIVE and ref.startswith(BASE):
+        ref = ref[len(BASE):]
     if LIVE or ref.startswith("http"):
         u = ref if ref.startswith("http") else BASE + "/" + ref.lstrip("/")
         try:
