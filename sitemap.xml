@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-09-16</lastmod>
+    <lastmod>2026-09-17</lastmod>
 
   </url>
   <url>
@@ -15,6 +15,11 @@
     <lastmod>2026-09-17</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin, New York</image:caption></image:image>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026-square.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/dot-la-carter-agency-article-one-source/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <image:image><image:loc>https://joshpopkin.com/images/dot-la-carter-agency-article-one-source/josh-popkin-manhattan-office-2026.jpg</image:loc><image:caption>Josh Popkin in New York, 2026.</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/what-its-like-to-be-publicly-shamed-on-the-internet/</loc>
@@ -85,10 +90,5 @@
     <loc>https://joshpopkin.com/insights/did-josh-popkin-do-stand-up-comedy/</loc>
     <lastmod>2026-07-24</lastmod>
     <image:image><image:loc>https://joshpopkin.com/images/did-josh-popkin-do-stand-up-comedy/josh-popkin.jpg</image:loc><image:caption>Josh Popkin, former stand-up comedian and marketing engineer</image:caption></image:image>
-  </url>
-  <url>
-    <loc>https://joshpopkin.com/insights/dot-la-carter-agency-article-one-source/</loc>
-    <lastmod>2022-12-01</lastmod>
-    <image:image><image:loc>https://joshpopkin.com/images/dot-la-carter-agency-article-one-source/josh-popkin-manhattan-office-2026.jpg</image:loc><image:caption>Josh Popkin in New York, 2026.</image:caption></image:image>
   </url>
 </urlset>
