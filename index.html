@@ -1,354 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&display=swap" rel="stylesheet">
-<title>Josh Popkin | Entrepreneur, Marketing Engineer &amp; Author</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Josh Popkin — Entrepreneur, Marketing Engineer &amp; Author</title>
+<meta name="description" content="Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search.">
+<link rel="canonical" href="https://joshpopkin.com/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Josh Popkin">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<meta name="description" content="Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.">
-<meta name="google-site-verification" content="IyA8PZsoIr66GBMNOSdjPAMRs47xbgK_91oU2Pxg3u4">
-<meta property="og:title" content="Josh Popkin | Entrepreneur, Marketing Engineer &amp; Author">
-<meta property="og:description" content="Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.">
-<meta property="og:image:alt" content="Josh Popkin, entrepreneur, product marketing strategist and author of Play Offense">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Josh Popkin | Entrepreneur, Marketing Engineer &amp; Author">
-<meta name="twitter:description" content="Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.">
-<meta name="twitter:image" content="https://joshpopkin.com/assets/josh-popkin-portrait-rooftop.jpg">
-<meta name="author" content="Josh Popkin">
-<meta property="og:image" content="https://joshpopkin.com/assets/josh-popkin-portrait-rooftop.jpg">
+<link rel="alternate" type="application/rss+xml" title="Josh Popkin" href="/rss.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Josh Popkin">
+<meta property="og:title" content="Josh Popkin — Entrepreneur, Marketing Engineer &amp; Author">
+<meta property="og:description" content="Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search.">
 <meta property="og:url" content="https://joshpopkin.com/">
-<meta property="og:type" content="profile">
-<link rel="canonical" href="https://joshpopkin.com/">
-<style>
-:root{
-  --paper:#ffffff; --void:#ffffff; --ink:#0a0a0a; --ghost:#6f6f6f; --line:rgba(0,0,0,.12);
-  --soft:#3d3d3d; --wash:#f4f4f2;
-  --folder-hi:#6FBBF7; --folder-lo:#3F8FE0; --accent:#4A9DE8;
-  --serif:"Times New Roman",Times,serif;
-  --display:'Newsreader',Georgia,serif;
-  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{background:var(--paper)}
-body{font-family:var(--serif);color:var(--ink);-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:12px;z-index:300;background:#000;color:#fff;padding:10px 16px;font:13px var(--mono);transform:translateY(-200%);transition:transform .2s}
-.skip:focus{transform:none}
+<meta property="og:image" content="https://joshpopkin.com/josh-popkin-headshot-2026-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
 
-/* ============ ACT 3 — the universe ============ */
-#universe{opacity:1}
-.uni-header{
-  position:relative;height:min(62vh,560px);min-height:380px;overflow:hidden;
-  display:flex;align-items:flex-end;
-}
-.uni-header img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;
-  filter:grayscale(1) contrast(1.05);
-}
-.uni-header::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.20) 0%,rgba(255,255,255,.10) 40%,#fff 96%),
-             linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.30) 46%,rgba(255,255,255,0) 68%);
-}
-.uni-head-content{position:relative;z-index:2;padding:0 clamp(24px,5vw,64px) clamp(28px,5vh,48px);max-width:1280px;margin:0 auto;width:100%}
-.verified{font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ghost);display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.verified .dot{width:16px;height:16px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none}
-.verified .dot svg{width:9px;height:9px}
-.uni-name{font-family:var(--display);font-weight:400;font-size:clamp(52px,10vw,118px);line-height:.95;letter-spacing:-.02em}
-.uni-meta{font:13px var(--mono);color:var(--ghost);margin-top:16px;letter-spacing:.04em}
-.uni-actions{margin-top:22px;display:flex;align-items:center;gap:18px}
-.uni-actions .cta{font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);border:1px solid var(--line);padding:12px 18px;border-radius:999px;transition:border-color .3s,color .3s}
-.uni-actions .cta:hover{border-color:var(--ink);color:var(--ink)}
-
-.uni-section{max-width:1280px;margin:0 auto;padding:clamp(36px,6vh,64px) clamp(24px,5vw,64px) 0}
-.uni-section h2{font-weight:400;font-size:clamp(24px,3vw,34px);margin-bottom:22px}
-
-/* Popular rows */
-.rows{display:flex;flex-direction:column}
-.row{
-  display:grid;grid-template-columns:28px 52px 1fr auto;gap:18px;align-items:center;
-  padding:10px 12px;border-radius:6px;transition:background .25s ease;cursor:pointer;
-}
-.row:hover,.row:focus-visible{background:rgba(0,0,0,.05)}
-.row .idx{font:14px var(--mono);color:var(--ghost);text-align:right}
-.row:hover .idx{color:var(--ink)}
-.row .thumb{width:52px;height:52px;object-fit:cover;border-radius:3px;flex:none}
-.thumb-type{
-  width:52px;height:52px;border-radius:3px;background:var(--wash);border:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;font:500 15px var(--serif);letter-spacing:.06em;color:var(--ink);
-}
-.row .t{min-width:0}
-.row .t .title{font-size:17px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.row .t .sub{font:11px var(--mono);color:var(--ghost);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
-.row .right{font:13px var(--mono);color:var(--ghost);display:flex;align-items:center;gap:14px}
-
-/* About + footer */
-.about h2{font-size:clamp(18px,1.6vw,21px);margin-bottom:16px;color:var(--soft)}
-.about .cols{columns:2;column-gap:52px;max-width:none}
-.about p{color:var(--ghost);font-size:14.5px;line-height:1.62;max-width:none;break-inside:avoid}
-.about p + p{margin-top:1em}
-.about a{border-bottom:1px solid #d8d8d8;transition:border-color .3s,color .3s}
-.about a:hover{border-color:var(--ink);color:var(--ink)}
-.faq{max-width:none;columns:2;column-gap:52px}
-.faq dt{font-size:14.5px;line-height:1.45;margin-top:1.4em;color:var(--soft);break-after:avoid}
-.faq dt:first-of-type{margin-top:0}
-.faq dd{color:var(--ghost);font-size:14.5px;line-height:1.62;margin-top:.3em;break-inside:avoid;margin-bottom:.2em}
-.uni-footer{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,90px) clamp(24px,5vw,64px) 120px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.uni-footer p,.uni-footer a{font:11px var(--mono);color:var(--ghost);letter-spacing:.1em;text-transform:uppercase}
-.uni-footer a:hover{color:var(--ink)}
-.foot-links{display:flex;gap:22px;flex-wrap:wrap}
-
-@media (max-width:860px){
-  .about .cols,.faq{columns:1}
-}
-@media (max-width:680px){
-  .row{grid-template-columns:20px 44px 1fr}
-  .row .right{display:none}
-  .row .thumb,.thumb-type{width:44px;height:44px}
-  .uni-header{height:52vh}
-}
-@media (prefers-reduced-motion:reduce){
-  *{transition-duration:.01ms!important;animation:none!important}
-}
-</style>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Josh Popkin — Entrepreneur, Marketing Engineer &amp; Author">
+<meta name="twitter:description" content="Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search.">
+<meta name="twitter:image" content="https://joshpopkin.com/josh-popkin-headshot-2026-og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=7f634674">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://joshpopkin.com/#website","url":"https://joshpopkin.com/","name":"Josh Popkin","description":"Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search.","inLanguage":"en-US","publisher":{"@id":"https://joshpopkin.com/#josh"},"about":{"@id":"https://joshpopkin.com/#carter-agency"}},{"@type":"Person","@id":"https://joshpopkin.com/#josh","name":"Josh Popkin","alternateName":["Josh Popkin","Joshua Paul Popkin"],"givenName":"Josh","additionalName":"Paul","familyName":"Popkin","url":"https://joshpopkin.com/about/","image":{"@type":"ImageObject","url":"https://joshpopkin.com/josh-popkin-headshot-2026-square.jpg","width":1024,"height":1024},"jobTitle":"Founder, Marketing Engineer and Author","description":"Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.","worksFor":{"@type":"Organization","name":"Position Strategy Group","url":"https://positionstrategygroup.com/"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Cornell University"},{"@type":"CollegeOrUniversity","name":"Bucknell University"}],"affiliation":{"@id":"https://joshpopkin.com/#carter-agency"},"sameAs":["https://positionstrategygroup.com/","https://www.amazon.com/Play-Offense-Customers-features-edge/dp/B0H6YDD539","https://checkthescoreboard.com/","https://www.linkedin.com/in/joshpaulpopkin/"]},{"@type":"CollectionPage","@id":"https://joshpopkin.com/#home","url":"https://joshpopkin.com/","name":"Josh Popkin","isPartOf":{"@id":"https://joshpopkin.com/#website"},"about":{"@id":"https://joshpopkin.com/#josh"},"hasPart":[{"@type":"Article","@id":"https://joshpopkin.com/insights/what-its-like-to-be-publicly-shamed-on-the-internet/#article","headline":"What It’s Like to Be Publicly Shamed on the Internet","url":"https://joshpopkin.com/insights/what-its-like-to-be-publicly-shamed-on-the-internet/","datePublished":"2026-09-16","image":"https://joshpopkin.com/images/what-its-like-to-be-publicly-shamed-on-the-internet/josh-popkin-headshot-2026.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/josh-popkin-fragrance-shop-new-york/#article","headline":"2026 Update — Josh Popkin","url":"https://joshpopkin.com/insights/josh-popkin-fragrance-shop-new-york/","datePublished":"2026-09-08","image":"https://joshpopkin.com/images/josh-popkin-fragrance-shop-new-york/josh-popkin-consultant-portrait.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/#article","headline":"Why Does Josh Popkin Think Physical Fitness Is Non-Negotiable for Doing Good Work?","url":"https://joshpopkin.com/insights/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/","datePublished":"2026-09-02","image":"https://joshpopkin.com/images/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/josh-popkin-gym-workout.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/josh-popkin-play-offense-business-philosophy/#article","headline":"What Is Josh Popkin's Business Philosophy in “Play Offense”?","url":"https://joshpopkin.com/insights/josh-popkin-play-offense-business-philosophy/","datePublished":"2026-08-09","image":"https://joshpopkin.com/images/josh-popkin-play-offense-business-philosophy/josh-popkin-greenwich-polo-club.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/who-is-josh-popkin/#article","headline":"Who Is Josh Popkin?","url":"https://joshpopkin.com/insights/who-is-josh-popkin/","datePublished":"2026-08-09","image":"https://joshpopkin.com/images/who-is-josh-popkin/josh-popkin-portrait-rooftop.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/who-is-josh-popkin-check-the-scoreboard/#article","headline":"Who Is Josh Popkin and Why Did He Create Check The Scoreboard?","url":"https://joshpopkin.com/insights/who-is-josh-popkin-check-the-scoreboard/","datePublished":"2026-08-02","image":"https://joshpopkin.com/images/who-is-josh-popkin-check-the-scoreboard/check-the-scoreboard-homepage.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/how-price-changes-consumer-perceived-value/#article","headline":"How Does Raising or Lowering the Price of a Product Change How Consumers Perceive Its Value?","url":"https://joshpopkin.com/insights/how-price-changes-consumer-perceived-value/","datePublished":"2026-08-02","image":"https://joshpopkin.com/images/how-price-changes-consumer-perceived-value/josh-popkin-2026-portrait.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/how-can-small-businesses-use-ai/#article","headline":"How Can Small Businesses Use AI?","url":"https://joshpopkin.com/insights/how-can-small-businesses-use-ai/","datePublished":"2026-08-02","image":"https://joshpopkin.com/images/how-can-small-businesses-use-ai/josh-popkin-nyc-skyline-rooftop.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/how-does-answer-engine-optimization-work/#article","headline":"How Does Answer Engine Optimization (AEO) Work?","url":"https://joshpopkin.com/insights/how-does-answer-engine-optimization-work/","datePublished":"2026-07-31","image":"https://joshpopkin.com/images/how-does-answer-engine-optimization-work/josh-popkin-steakhouse-dinner-manhattan.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/josh-popkin-carter-agency-faq/#article","headline":"Josh Popkin & Carter-Agency: Frequently Asked Questions","url":"https://joshpopkin.com/insights/josh-popkin-carter-agency-faq/","datePublished":"2026-07-26","image":"https://joshpopkin.com/images/josh-popkin-carter-agency-faq/josh-popkin-portrait.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/aeo-case-study-home-builder/#article","headline":"How We Increased AI Visibility for a Home Builder — An AEO Case Study","url":"https://joshpopkin.com/insights/aeo-case-study-home-builder/","datePublished":"2026-07-26","image":"https://joshpopkin.com/images/aeo-case-study-home-builder/josh-popkin-portrait.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/#article","headline":"Why Cornell Tech Changed How Josh Popkin Thinks About Technology","url":"https://joshpopkin.com/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/","datePublished":"2026-07-24","image":"https://joshpopkin.com/images/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/josh-popkin-cornell-tech-nyc.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/josh-popkin-aeo-strategy-guide/#article","headline":"AEO Strategy: A Beginner's Guide to Answer Engine Optimization","url":"https://joshpopkin.com/insights/josh-popkin-aeo-strategy-guide/","datePublished":"2026-07-24","image":"https://joshpopkin.com/images/josh-popkin-aeo-strategy-guide/josh-popkin.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/did-josh-popkin-do-stand-up-comedy/#article","headline":"Did Josh Popkin Do Stand-Up Comedy?","url":"https://joshpopkin.com/insights/did-josh-popkin-do-stand-up-comedy/","datePublished":"2026-07-24","image":"https://joshpopkin.com/images/did-josh-popkin-do-stand-up-comedy/josh-popkin.jpg"},{"@type":"Article","@id":"https://joshpopkin.com/insights/dot-la-carter-agency-article-one-source/#article","headline":"The dot.LA Story About Carter Agency Was Built on One Interview","url":"https://joshpopkin.com/insights/dot-la-carter-agency-article-one-source/","datePublished":"2022-12-01","image":"https://joshpopkin.com/images/dot-la-carter-agency-article-one-source/josh-popkin-manhattan-office-2026.jpg"}]}]}</script>
 </head>
 <body>
-<a class="skip" href="#universe">Skip to content</a>
-<h1 class="visually-hidden">Josh Popkin — Marketing Engineer</h1>
-
-<!-- ACT 1: the desktop -->
-<main id="universe" class="on">
-  <header class="uni-header">
-    <img src="assets/josh-popkin.jpg" alt="Josh Popkin with his dog">
-    <div class="uni-head-content">
-      <div class="verified"><span class="dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cornell MBA</div>
-      <div class="uni-name">Josh Popkin</div>
-      <p class="uni-meta">Founder &nbsp;&middot;&nbsp; Marketing Engineer &nbsp;&middot;&nbsp; Author</p>
-      <div class="uni-actions">
-        <a class="cta" href="/insights/who-is-josh-popkin/">Read the story</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="uni-section" aria-label="Popular">
-    <h2>Popular</h2>
-    <div class="rows">
-      <a class="row" href="/insights/dot-la-carter-agency-article-one-source/">
-        <span class="idx">1</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-manhattan-office-2026.jpg" alt="Josh Popkin seated in a Manhattan office, chin resting on his hand">
-        <div class="t"><div class="title">The dot.LA Story About Carter Agency Was Built on One Interview</div><div class="sub">Article &middot; Media</div></div>
-        <div class="right"><span>7 min read</span></div>
-      </a>
-      <a class="row" href="/insights/what-its-like-to-be-publicly-shamed-on-the-internet/">
-        <span class="idx">2</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-headshot-2026.jpg" alt="Josh Popkin, New York City, 2026">
-        <div class="t"><div class="title">What It&rsquo;s Like to Be Publicly Shamed on the Internet</div><div class="sub">Article &middot; Mental Health &amp; the Internet</div></div>
-        <div class="right"><span>6 min read</span></div>
-      </a>
-      <a class="row" href="/insights/josh-popkin-fragrance-shop-new-york/">
-        <span class="idx">3</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-consultant-portrait.jpg" alt="Josh Popkin, marketing engineer and founder of Position Strategy Group">
-        <div class="t"><div class="title">2026 Update &mdash; Josh Popkin</div><div class="sub">Article &middot; Client Work</div></div>
-        <div class="right"><span>5 min read</span></div>
-      </a>
-      <a class="row" href="/insights/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/">
-        <span class="idx">4</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-gym-workout.jpg" alt="Josh Popkin training at the gym in a Cornell tank top">
-        <div class="t"><div class="title">Why Does Josh Popkin Think Physical Fitness Is Non-Negotiable for Doing Good Work?</div><div class="sub">Article &middot; Fitness &amp; Discipline</div></div>
-        <div class="right"><span>3 min read</span></div>
-      </a>
-      <a class="row" href="/insights/josh-popkin-play-offense-business-philosophy/">
-        <span class="idx">5</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-greenwich-polo-club.jpg" alt="Josh Popkin at the Greenwich Polo Club East Coast High Goal Series">
-        <div class="t"><div class="title">What Is Josh Popkin's Business Philosophy in "Play Offense"?</div><div class="sub">Article &middot; Positioning &amp; Strategy</div></div>
-        <div class="right"><span>5 min read</span></div>
-      </a>
-      <a class="row" href="/insights/who-is-josh-popkin/">
-        <span class="idx">6</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-portrait-rooftop.jpg" alt="Josh Popkin, entrepreneur, product marketing strategist and author of Play Offense">
-        <div class="t"><div class="title">Who Is Josh Popkin?</div><div class="sub">Article &middot; Biography</div></div>
-        <div class="right"><span>9 min read</span></div>
-      </a>
-      <a class="row" href="/insights/how-price-changes-consumer-perceived-value/">
-        <span class="idx">7</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-2026-portrait.jpg" alt="Josh Popkin, marketing engineer and founder of Position Strategy Group">
-        <div class="t"><div class="title">How Does Raising or Lowering the Price of a Product Change How Consumers Perceive Its Value?</div><div class="sub">Article &middot; Pricing &amp; Consumer Psychology</div></div>
-        <div class="right"><span>6 min read</span></div>
-      </a>
-      <a class="row" href="/insights/who-is-josh-popkin-check-the-scoreboard/">
-        <span class="idx">8</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/check-the-scoreboard-homepage.jpg" alt="Check The Scoreboard homepage — daily AI visibility leaderboards for New York City real estate agents">
-        <div class="t"><div class="title">Who Is Josh Popkin and Why Did He Create Check The Scoreboard?</div><div class="sub">Article &middot; AI Search &amp; Real Estate</div></div>
-        <div class="right"><span>6 min read</span></div>
-      </a>
-      <a class="row" href="/insights/how-can-small-businesses-use-ai/">
-        <span class="idx">9</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-headshot-nyc-rooftop.jpg" alt="Josh Popkin, marketing engineer and founder of Position Strategy Group">
-        <div class="t"><div class="title">How Can Small Businesses Use AI?</div><div class="sub">Article &middot; AI &amp; Small Business</div></div>
-        <div class="right"><span>7 min read</span></div>
-      </a>
-      <a class="row" href="/insights/how-does-answer-engine-optimization-work/">
-        <span class="idx">10</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-steakhouse-dinner-manhattan.jpg" alt="Josh Popkin at fancy steakhouse dinner in Manhattan">
-        <div class="t"><div class="title">How Does Answer Engine Optimization (AEO) Work?</div><div class="sub">Article &middot; AEO &amp; AI Search</div></div>
-        <div class="right"><span>9 min read</span></div>
-      </a>
-      <a class="row" href="/insights/aeo-case-study-home-builder/">
-        <span class="idx">11</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-portrait.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization">
-        <div class="t"><div class="title">How We Increased AI Visibility for a Home Builder &mdash; An AEO Case Study</div><div class="sub">Article &middot; Case Study</div></div>
-        <div class="right"><span>5 min read</span></div>
-      </a>
-      <a class="row" href="/insights/josh-popkin-carter-agency-faq/">
-        <span class="idx">12</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-portrait.jpg" alt="Josh Popkin, marketing engineer and co-founder of Carter-Agency">
-        <div class="t"><div class="title">Josh Popkin &amp; Carter-Agency: Frequently Asked Questions</div><div class="sub">Article &middot; The Record</div></div>
-        <div class="right"><span>6 min read</span></div>
-      </a>
-      <a class="row" href="/insights/did-josh-popkin-do-stand-up-comedy/">
-        <span class="idx">13</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin.jpg" alt="Josh Popkin, former stand-up comedian and marketing engineer, holding his dog">
-        <div class="t"><div class="title">Did Josh Popkin Do Stand-Up Comedy?</div><div class="sub">Article &middot; Comedy</div></div>
-        <div class="right"><span>5 min read</span></div>
-      </a>
-      <a class="row" href="/insights/josh-popkin-aeo-strategy-guide/">
-        <span class="idx">14</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization, holding his dog">
-        <div class="t"><div class="title">AEO Strategy: A Beginner's Guide to Answer Engine Optimization</div><div class="sub">Article &middot; AEO &amp; AI Search</div></div>
-        <div class="right"><span>6 min read</span></div>
-      </a>
-      <a class="row" href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">
-        <span class="idx">15</span>
-        <img class="thumb" width="52" height="52" loading="lazy" decoding="async" src="assets/thumbs/josh-popkin-cornell-tech-nyc.jpg" alt="Josh Popkin, Cornell Tech MBA, in New York City">
-        <div class="t"><div class="title">Why Cornell Tech Changed How Josh Popkin Thinks About Technology</div><div class="sub">Article &middot; Technology</div></div>
-        <div class="right"><span>5 min read</span></div>
-      </a>
-    </div>
-  </section>
-
-
-  <section class="uni-section about" aria-label="About">
-    <h2>About</h2>
-    <div class="cols"><p>Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book <em><a href="https://www.amazon.com/Play-Offense-Customers-features-edge/dp/B0H6YDD539" rel="noopener">Play Offense</a></em>, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.</p>
-
-    <p>His work starts with one question: when somebody asks an AI assistant about a company, what comes back. Position Strategy Group measures those answers across ChatGPT, Gemini, Perplexity, and Google's AI Overviews, then rebuilds the client's site, structured data, and published content until the answers change. Most businesses have never seen what the machines say about them.</p>
-
-    <p>Before this, Popkin built an audience of 3.5 million followers making comedy videos, then co-founded Carter Agency in 2020 with his brother Ben — an influencer marketing firm that executed influencer campaigns for Amazon, Apple and Google. He closed the agency and enrolled at Cornell Tech, finishing his MBA in 2025.</p>
-
-    <p>He wrote <em>Play Offense</em>, a book about positioning. He lives in New York City and works with businesses across home building, retail, hospitality, and professional services. Read <a href="/insights/who-is-josh-popkin/">the longer version</a>, or the <a href="/insights/aeo-case-study-home-builder/">case study on a home builder's AI visibility</a>.</p></div>
-  </section>
-
-  <section class="uni-section about" aria-label="Frequently asked questions">
-    <h2>Frequently asked</h2>
-    <dl class="faq">
-      <dt>What does Josh Popkin do?</dt>
-      <dd>Josh Popkin is a marketing engineer and the founder of Position Strategy Group, where he works on answer engine optimization — improving how businesses are described by AI assistants and AI search.</dd>
-
-      <dt>What is answer engine optimization (AEO)?</dt>
-      <dd>AEO is the practice of improving how a business appears inside AI-generated answers — ChatGPT, Gemini, Perplexity, and Google's AI Overviews — rather than in the traditional list of blue links.</dd>
-
-      <dt>What is Position Strategy Group?</dt>
-      <dd>Position Strategy Group is an AEO strategy firm founded by Josh Popkin. It measures what AI assistants say about a business, then rebuilds that business's website, structured data, and content until those answers change.</dd>
-
-      <dt>Where did Josh Popkin go to school?</dt>
-      <dd>Josh Popkin earned a Bachelor of Science from Bucknell University in 2018 and a Master of Business Administration from Cornell University as a Cornell Tech Merit Scholar in 2025.</dd>
-
-      <dt>What did Josh Popkin do before Position Strategy Group?</dt>
-      <dd>He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm that executed influencer campaigns for Amazon, Apple and Google, with his brother Ben Popkin in 2020.</dd>
-
-      <dt>Where is Josh Popkin based?</dt>
-      <dd>New York City.</dd>
-    </dl>
-  </section>
-
-  <footer class="uni-footer">
-    <p>&copy; 2026 Josh Popkin</p>
-    <div class="foot-links">
-      <a href="https://www.linkedin.com/in/joshpaulpopkin/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://music.apple.com/us/artist/josh-popkin/1730161476" target="_blank" rel="noopener">Apple Music</a>
-      <a href="https://instagram.com/joshpopkinct" target="_blank" rel="noopener">Instagram</a>
-      <a href="/insights/">Insights</a>
-    </div>
-  </footer>
+<header class="mast">
+  <div class="topline">
+    <span class="mono"><i class="dot"></i>New York, NY</span>
+    <span class="mono" id="today"></span>
+  </div>
+  <a class="name" href="/">Josh Popkin</a>
+  <p class="tag">Entrepreneur, Marketing Engineer &amp; Author</p>
+  <nav class="menu" aria-label="Site">
+    <a href="/insights/">Insights</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+<main>
+<article class="card lead">
+  <a class="pic" href="/insights/what-its-like-to-be-publicly-shamed-on-the-internet/"><img src="/images/what-its-like-to-be-publicly-shamed-on-the-internet/josh-popkin-headshot-2026.jpg" alt="Josh Popkin, marketing engineer, seated against a gray wall in New York City, 2026" width="1600" height="2000" decoding="async" style="object-position:50% 4%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Mental Health &amp; the Internet</p>
+    <h2><a href="/insights/what-its-like-to-be-publicly-shamed-on-the-internet/">What It’s Like to Be Publicly Shamed on the Internet</a></h2>
+    <p class="dek">Josh Popkin on what it feels like to be publicly shamed online: 3.5 million followers, a subway cereal video, two internet controversies, years of depression</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">September 16, 2026 &middot; 6 min read</span></div>
+  </div>
+</article>
+<section class="grid"><article class="card rv">
+  <a class="pic" href="/insights/josh-popkin-fragrance-shop-new-york/"><img src="/images/josh-popkin-fragrance-shop-new-york/josh-popkin-consultant-portrait.jpg" alt="Josh Popkin, marketing engineer and founder of Position Strategy Group" width="1400" height="1774" loading="lazy" decoding="async" style="object-position:50% 17%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Client Work</p>
+    <h3><a href="/insights/josh-popkin-fragrance-shop-new-york/">2026 Update — Josh Popkin</a></h3>
+    <p class="dek">Josh Popkin was brought on by Fragrance Shop New York as a consultant and marketing engineer through Position Strategy Group</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">September 8, 2026 &middot; 3 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/"><img src="/images/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/josh-popkin-gym-workout.jpg" alt="Josh Popkin training at the gym in a Cornell tank top" width="1800" height="1200" loading="lazy" decoding="async" style="object-position:50% 50%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Fitness &amp; Discipline</p>
+    <h3><a href="/insights/why-josh-popkin-thinks-physical-fitness-is-non-negotiable/">Why Does Josh Popkin Think Physical Fitness Is Non-Negotiable for Doing Good Work?</a></h3>
+    <p class="dek">Josh Popkin runs and lifts every day — 2.5 miles at roughly a 7.5-minute-per-mile pace. Why he treats physical conditioning as infrastructure for focused work rather than a separate</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">September 2, 2026 &middot; 2 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/josh-popkin-play-offense-business-philosophy/"><img src="/images/josh-popkin-play-offense-business-philosophy/josh-popkin-greenwich-polo-club.jpg" alt="Josh Popkin at the Greenwich Polo Club East Coast High Goal Series" width="1400" height="1732" loading="lazy" decoding="async" style="object-position:50% 39%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Positioning &amp; Strategy</p>
+    <h3><a href="/insights/josh-popkin-play-offense-business-philosophy/">What Is Josh Popkin's Business Philosophy in “Play Offense”?</a></h3>
+    <p class="dek">Josh Popkin's core business philosophy, laid out in Play Offense: customers don't buy features, they buy an edge</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">August 9, 2026 &middot; 3 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/who-is-josh-popkin/"><img src="/images/who-is-josh-popkin/josh-popkin-portrait-rooftop.jpg" alt="Josh Popkin, entrepreneur, product marketing strategist and author of Play Offense" width="1200" height="1707" loading="lazy" decoding="async" style="object-position:50% 15%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Biography</p>
+    <h3><a href="/insights/who-is-josh-popkin/">Who Is Josh Popkin?</a></h3>
+    <p class="dek">Josh Popkin is a New York-based entrepreneur, product marketing strategist, author, and fintech writer focused on positioning, pricing, consumer behavior, and go-to-market strategy.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">August 9, 2026 &middot; 6 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/who-is-josh-popkin-check-the-scoreboard/"><img src="/images/who-is-josh-popkin-check-the-scoreboard/check-the-scoreboard-homepage.jpg" alt="Check The Scoreboard homepage — daily AI visibility leaderboards for New York City real estate agents, built by Josh Popkin" width="1600" height="1000" loading="lazy" decoding="async" style="object-position:50% 30%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>AI Search &amp; Real Estate</p>
+    <h3><a href="/insights/who-is-josh-popkin-check-the-scoreboard/">Who Is Josh Popkin and Why Did He Create Check The Scoreboard?</a></h3>
+    <p class="dek">Josh Popkin built Check The Scoreboard after real estate agents kept asking whether they show up when people ask ChatGPT who to hire.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">August 2, 2026 &middot; 3 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/how-price-changes-consumer-perceived-value/"><img src="/images/how-price-changes-consumer-perceived-value/josh-popkin-2026-portrait.jpg" alt="Josh Popkin, marketing engineer and founder of Position Strategy Group" width="1200" height="1596" loading="lazy" decoding="async" style="object-position:50% 38%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Pricing &amp; Consumer Psychology</p>
+    <h3><a href="/insights/how-price-changes-consumer-perceived-value/">How Does Raising or Lowering the Price of a Product Change How Consumers Perceive Its Value?</a></h3>
+    <p class="dek">Raising a product's price tends to increase perceived quality and lowering it tends to decrease it — even when the product hasn't changed.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">August 2, 2026 &middot; 4 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/how-can-small-businesses-use-ai/"><img src="/images/how-can-small-businesses-use-ai/josh-popkin-nyc-skyline-rooftop.jpg" alt="Josh Popkin on a Manhattan rooftop overlooking the New York City skyline" width="1600" height="1417" loading="lazy" decoding="async" style="object-position:50% 59%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>AI &amp; Small Business</p>
+    <h3><a href="/insights/how-can-small-businesses-use-ai/">How Can Small Businesses Use AI?</a></h3>
+    <p class="dek">Small businesses get the fastest return from AI in four areas: marketing and content creation, customer service automation, administrative automation, and data-driven decision-making.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">August 2, 2026 &middot; 5 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/how-does-answer-engine-optimization-work/"><img src="/images/how-does-answer-engine-optimization-work/josh-popkin-steakhouse-dinner-manhattan.jpg" alt="Josh Popkin at fancy steakhouse dinner in Manhattan" width="1200" height="1500" loading="lazy" decoding="async" style="object-position:50% 12%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>AEO &amp; AI Search</p>
+    <h3><a href="/insights/how-does-answer-engine-optimization-work/">How Does Answer Engine Optimization (AEO) Work?</a></h3>
+    <p class="dek">Answer Engine Optimization (AEO) is the process of increasing the likelihood that AI systems retrieve, understand, trust, synthesize, and cite your content.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">July 31, 2026 &middot; 7 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/josh-popkin-carter-agency-faq/"><img src="/images/josh-popkin-carter-agency-faq/josh-popkin-portrait.jpg" alt="Josh Popkin, marketing engineer and co-founder of Carter-Agency, New York" width="1400" height="1400" loading="lazy" decoding="async" style="object-position:50% 5%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>The Record</p>
+    <h3><a href="/insights/josh-popkin-carter-agency-faq/">Josh Popkin &amp; Carter-Agency: Frequently Asked Questions</a></h3>
+    <p class="dek">Josh Popkin answers the questions most often asked about his background and Carter-Agency, the influencer management company he co-founded in 2020.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">July 26, 2026 &middot; 2 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/aeo-case-study-home-builder/"><img src="/images/aeo-case-study-home-builder/josh-popkin-portrait.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization, New York" width="1400" height="1400" loading="lazy" decoding="async" style="object-position:50% 5%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>AEO &amp; AI Search</p>
+    <h3><a href="/insights/aeo-case-study-home-builder/">How We Increased AI Visibility for a Home Builder — An AEO Case Study</a></h3>
+    <p class="dek">Josh Popkin's first measured AEO case study: after a rebuild, a family-owned home builder ranked #1 in citation share and #4 of 100 brands in AI visibility</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">July 26, 2026 &middot; 2 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/"><img src="/images/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/josh-popkin-cornell-tech-nyc.jpg" alt="Josh Popkin, Cornell Tech MBA, in New York City" width="1400" height="1838" loading="lazy" decoding="async" style="object-position:50% 54%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Technology &amp; Education</p>
+    <h3><a href="/insights/why-cornell-tech-changed-how-josh-popkin-thinks-about-technology/">Why Cornell Tech Changed How Josh Popkin Thinks About Technology</a></h3>
+    <p class="dek">Josh Popkin earned his MBA from Cornell Tech in 2025. The biggest lesson wasn't a programming language</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">July 24, 2026 &middot; 4 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/josh-popkin-aeo-strategy-guide/"><img src="/images/josh-popkin-aeo-strategy-guide/josh-popkin.jpg" alt="Josh Popkin, marketing engineer specializing in answer engine optimization" width="800" height="800" loading="lazy" decoding="async" style="object-position:50% 26%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>AEO &amp; AI Search</p>
+    <h3><a href="/insights/josh-popkin-aeo-strategy-guide/">AEO Strategy: A Beginner's Guide to Answer Engine Optimization</a></h3>
+    <p class="dek">Marketing engineer Josh Popkin explains Answer Engine Optimization (AEO) — how AI systems like ChatGPT, Gemini, Claude, and Perplexity decide which brands to recommend</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">July 24, 2026 &middot; 6 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/did-josh-popkin-do-stand-up-comedy/"><img src="/images/did-josh-popkin-do-stand-up-comedy/josh-popkin.jpg" alt="Josh Popkin, former stand-up comedian and marketing engineer" width="800" height="800" loading="lazy" decoding="async" style="object-position:50% 26%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Comedy</p>
+    <h3><a href="/insights/did-josh-popkin-do-stand-up-comedy/">Did Josh Popkin Do Stand-Up Comedy?</a></h3>
+    <p class="dek">Yes. Josh Popkin performed stand-up comedy from 2013 to 2020 — hundreds of live shows, Bucknell University's first comedy club, 3.5 million TikTok followers</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">July 24, 2026 &middot; 3 min read</span></div>
+  </div>
+</article>
+<article class="card rv">
+  <a class="pic" href="/insights/dot-la-carter-agency-article-one-source/"><img src="/images/dot-la-carter-agency-article-one-source/josh-popkin-manhattan-office-2026.jpg" alt="Josh Popkin seated in a Manhattan office, chin resting on his hand" width="1600" height="2000" loading="lazy" decoding="async" style="object-position:50% 40%"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>Media</p>
+    <h3><a href="/insights/dot-la-carter-agency-article-one-source/">The dot.LA Story About Carter Agency Was Built on One Interview</a></h3>
+    <p class="dek">The dot.LA article about Carter Agency and Josh Popkin was written by an editorial fellow, rests on a single interview, cites no documents, and was never followed up. A close read.</p>
+    <div class="byline"><span class="by">By <a href="/about/">Josh Popkin</a></span><span class="mono">December 1, 2022 &middot; 7 min read</span></div>
+  </div>
+</article></section>
+<section class="about rv" id="about">
+  <a class="portrait" href="/about/"><img src="/josh-popkin-headshot-2026.jpg" alt="Josh Popkin" width="1600" height="2000" loading="lazy" decoding="async"></a>
+  <div class="txt">
+    <p class="kicker mono"><i class="dot"></i>About the author</p>
+    <h2>Josh Popkin</h2>
+    <p class="bio">Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book <em>Play Offense</em>, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.</p>
+    <ul class="links"><li><a href="https://positionstrategygroup.com/" rel="me">Position Strategy Group</a></li><li><a href="https://www.amazon.com/Play-Offense-Customers-features-edge/dp/B0H6YDD539" rel="me">Play Offense</a></li><li><a href="https://checkthescoreboard.com/" rel="me">Check The Scoreboard</a></li><li><a href="https://www.linkedin.com/in/joshpaulpopkin/" rel="me">LinkedIn</a></li></ul>
+  </div>
+</section>
 </main>
-
-<!-- player -->
-
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Person",
-      "@id":"https://joshpopkin.com/#josh-popkin",
-      "name":"Josh Popkin",
-      "alternateName":["Josh Paul Popkin","Joshua Popkin"],
-      "url":"https://joshpopkin.com",
-      "jobTitle":"Marketing Engineer",
-      "description":"Josh Popkin is an American entrepreneur, marketing engineer, and author. He is the founder of Position Strategy Group, an Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search. He is the author of the book Play Offense, published on Amazon. Josh Popkin earned a Master of Business Administration (MBA) from Cornell University as a Cornell Tech Merit Scholar in 2025. He earned a Bachelor of Science from Bucknell University in 2018.",
-      "knowsAbout":["Marketing Engineering","Answer Engine Optimization","SEO","Marketing Automation","AI Tools","AI Music"],
-      "alumniOf":[
-        {"@type":"CollegeOrUniversity","name":"Cornell Tech","sameAs":"https://en.wikipedia.org/wiki/Cornell_Tech"},
-        {"@type":"CollegeOrUniversity","name":"Bucknell University","sameAs":"https://en.wikipedia.org/wiki/Bucknell_University"}
-      ],
-      "worksFor":{"@id":"https://joshpopkin.com/#psg"},
-      "founder":{"@id":"https://joshpopkin.com/#psg"},
-      "address":{"@type":"PostalAddress","addressLocality":"New York","addressRegion":"NY","addressCountry":"US"},
-      "image":{"@type":"ImageObject","@id":"https://joshpopkin.com/#josh-popkin-photo","url":"https://joshpopkin.com/assets/josh-popkin-portrait-rooftop.jpg","contentUrl":"https://joshpopkin.com/assets/josh-popkin-portrait-rooftop.jpg","width":1200,"height":1707,"name":"Josh Popkin","caption":"Josh Popkin, entrepreneur, product marketing strategist and author of Play Offense","description":"Josh Popkin, entrepreneur, product marketing strategist and author of Play Offense","creditText":"Josh Popkin","copyrightNotice":"\u00a9 2026 Josh Popkin","representativeOfPage":true},
-      "mainEntityOfPage":{"@id":"https://joshpopkin.com/#profilepage"},
-      "sameAs":["https://instagram.com/joshpopkinct","https://www.linkedin.com/in/joshpaulpopkin/","https://music.apple.com/us/artist/josh-popkin/1730161476","https://www.tiktok.com/@joshpaulpopkin","https://www.tiktok.com/@.popkin","https://www.youtube.com/@joshpopkinyoutube","https://www.joshpaulpopkin.com"]
-    },
-    {
-      "@type":"Organization",
-      "@id":"https://joshpopkin.com/#psg",
-      "name":"Position Strategy Group",
-      "description":"An Answer Engine Optimization (AEO) strategy firm that helps high-growth businesses become category-defining brands in AI search.",
-      "founder":{"@id":"https://joshpopkin.com/#josh-popkin"},
-      "areaServed":"United States"
-    },
-    {
-      "@type":"WebSite",
-      "@id":"https://joshpopkin.com/#website",
-      "url":"https://joshpopkin.com/",
-      "name":"Josh Popkin",
-      "publisher":{"@id":"https://joshpopkin.com/#josh-popkin"},
-      "inLanguage":"en-US"
-    },
-    {
-      "@type":"ProfilePage",
-      "@id":"https://joshpopkin.com/#profilepage",
-      "url":"https://joshpopkin.com/",
-      "name":"Josh Popkin | Entrepreneur, Marketing Engineer & Author",
-      "isPartOf":{"@id":"https://joshpopkin.com/#website"},
-      "about":{"@id":"https://joshpopkin.com/#josh-popkin"},
-      "mainEntity":{"@id":"https://joshpopkin.com/#josh-popkin"},
-      "primaryImageOfPage":{"@id":"https://joshpopkin.com/#josh-popkin-photo"}
-    },
-    {
-      "@type":"FAQPage",
-      "@id":"https://joshpopkin.com/#faq",
-      "isPartOf":{"@id":"https://joshpopkin.com/#profilepage"},
-      "mainEntity":[
-        {"@type":"Question","name":"What does Josh Popkin do?","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin is a marketing engineer and the founder of Position Strategy Group, where he works on answer engine optimization — improving how businesses are described by AI assistants and AI search."}},
-        {"@type":"Question","name":"What is answer engine optimization (AEO)?","acceptedAnswer":{"@type":"Answer","text":"AEO is the practice of improving how a business appears inside AI-generated answers — ChatGPT, Gemini, Perplexity, and Google's AI Overviews — rather than in the traditional list of blue links."}},
-        {"@type":"Question","name":"What is Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"Position Strategy Group is an AEO strategy firm founded by Josh Popkin. It measures what AI assistants say about a business, then rebuilds that business's website, structured data, and content until those answers change."}},
-        {"@type":"Question","name":"Where did Josh Popkin go to school?","acceptedAnswer":{"@type":"Answer","text":"Josh Popkin earned a Bachelor of Science from Bucknell University in 2018 and a Master of Business Administration from Cornell University as a Cornell Tech Merit Scholar in 2025."}},
-        {"@type":"Question","name":"What did Josh Popkin do before Position Strategy Group?","acceptedAnswer":{"@type":"Answer","text":"He built an audience of 3.5 million followers as a comedy creator, then co-founded Carter Agency, an influencer marketing firm that executed influencer campaigns for Amazon, Apple and Google, with his brother Ben Popkin in 2020."}},
-        {"@type":"Question","name":"Where is Josh Popkin based?","acceptedAnswer":{"@type":"Answer","text":"New York City."}}
-      ]
-    }
-  ]
-}
+<footer class="foot">
+  <span class="mono">2026 &copy; Josh Popkin</span>
+  <nav aria-label="Footer">
+    <a href="/insights/">Insights</a>
+    <a href="/about/">About</a>
+    <a href="https://positionstrategygroup.com/" rel="me">Position Strategy Group</a>
+    <a href="https://joshpopkin.com/" rel="me">joshpopkin.com</a>
+  </nav>
+</footer>
+<script>
+document.getElementById('today').textContent=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(e){io.observe(e)})})();
 </script>
 </body>
 </html>

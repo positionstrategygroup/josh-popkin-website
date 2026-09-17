@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 
 User-agent: Googlebot-Image
-Disallow: /assets/thumbs/
 Disallow: /favicon.ico
 Disallow: /icon-96.png
 Disallow: /icon-192.png
