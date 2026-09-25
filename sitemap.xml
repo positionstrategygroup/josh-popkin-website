@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-25</lastmod>
 
   </url>
   <url>
@@ -15,6 +15,11 @@
     <lastmod>2026-09-19</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin, New York</image:caption></image:image>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026-square.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/buzzfeed-removes-josh-popkin-image-copyright-complaint/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <image:image><image:loc>https://joshpopkin.com/images/buzzfeed-removes-josh-popkin-image-copyright-complaint/buzzfeed-removes-josh-popkin-image-copyright-complaint-card.jpg</image:loc><image:caption>Josh Popkin.</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/josh-popkin-september-19-2026-press-update/</loc>
