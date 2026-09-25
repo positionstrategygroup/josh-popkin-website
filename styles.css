@@ -112,6 +112,7 @@ figcaption .credit{font-family:var(--m);font-size:10px;letter-spacing:.12em;text
 .body code{font-family:var(--m);font-size:.82em;background:var(--paper);padding:.1em .35em}
 .body .fig{margin:2em 0}
 .body .fig img{width:100%;background:var(--paper)}
+.body .fig.shot img{border:1px solid var(--hair)}
 .art-end{padding:36px 0 0;text-align:center}
 .art-end .dot{margin:0}
 .more{margin-top:clamp(60px,9vh,110px)}
