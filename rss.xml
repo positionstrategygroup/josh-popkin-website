@@ -7,32 +7,36 @@
   <language>en-us</language>
   <atom:link href="https://joshpopkin.com/rss.xml" rel="self" type="application/rss+xml"/>
   <item>
-    <title>dot.LA is A Fake News Room</title>
+    <title>Opinion: dot.LA Fired Its Newsroom. So Who Is Writing the News?</title>
     <link>https://joshpopkin.com/insights/dot-la-is-a-fake-news-room/</link>
     <guid isPermaLink="true">https://joshpopkin.com/insights/dot-la-is-a-fake-news-room/</guid>
     <pubDate>Sun, 27 Sep 2026 12:00:00 GMT</pubDate>
-    <description>An opinion piece by Josh Popkin on dot.LA: who writes its articles, whether it uses AI to produce them, and whether it meets the SPJ Code of Ethics.</description>
+    <description>Opinion: dot.LA fired its editorial staff in 2023. Josh Popkin asks who writes its articles now, whether AI is involved, and why readers are not told.</description>
     <dc:creator>Josh Popkin</dc:creator>
-    <content:encoded><![CDATA[<p><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/josh-popkin-black-and-white-portrait-2026.jpg" alt="Josh Popkin, black-and-white portrait in a knit polo, New York"></p><h2>What is dot.LA?</h2>
-<p>dot.LA is a fake newsroom created by Spencer Rascoff, alongside Sam Adams and Will Chockley. What started as a legitimate organization, <a href="https://www.thewrap.com/dot-la-sacks-entire-editorial-staff-ceo-sam-adams/" rel="noopener">after the firing of all of its writers in 2023</a>, has now become an AI slop factory.</p>
+    <content:encoded><![CDATA[<p><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/dot-la-is-a-fake-news-room-card.jpg" alt="Josh Popkin, black-and-white portrait, with the title Who Is Writing dot.LA’s News?"></p><p><em>Disclosure: dot.LA published an article about me in 2023. I’ve written about that article <a href="https://joshpopkin.com/insights/dot-la-carter-agency-article-one-source/" rel="noopener">separately</a>. This piece is about how dot.LA operates today.</em></p>
+<h2>What is dot.LA?</h2>
+<p>dot.LA is a Los Angeles tech news site created by Spencer Rascoff, alongside Sam Adams and Will Chockley. It started as a legitimate newsroom. In 2023, according to <a href="https://www.thewrap.com/dot-la-sacks-entire-editorial-staff-ceo-sam-adams/" rel="noopener">TheWrap</a>, dot.LA fired its entire editorial staff. In my opinion, what it publishes today looks less like journalism and more like an AI content mill.</p>
 <figure class="fig shot"><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/dot-la-grace-lee-bylines-september-2026.jpg" alt="dot.LA article grid with recent articles bylined Grace Lee" width="2048" height="1063" loading="lazy" decoding="async"><figcaption>dot.LA, September 2026.</figcaption></figure>
-<h2>Who exposed dot.LA for being a fake newsroom?</h2>
-<p>Josh Popkin exposed dot.LA for being a fake newsroom. Josh was the victim of an inaccurate, false, and misleading article published by Kristin Snyder in 2023. Since then, Josh has researched dot.LA and noticed a deceptive tactic the organization uses: they don’t have journalists and don’t write any articles. They have one product designer, <a href="https://dot.la/rainmaker-raises-100m-solve-weather-2677939101.html" rel="noopener">Grace Lee</a>, who uses AI to produce massive amounts of regurgitated slop.</p>
-<h2>Does dot.LA break the journalism code of ethics?</h2>
-<p>Yes. <a href="https://www.spj.org/" rel="noopener">SPJ’s Code of Ethics</a> says that journalists must seek truth and report it. dot.LA fails to do this, as they don’t write their own articles. They use product designers like Grace Lee to look at other articles being written and then use AI to publish parrot-like articles in order to gain clicks and monetization. dot.LA is not a truth-seeking publication. dot.LA is an AI slop factory being used for financial gain.</p>
-<figure class="fig shot"><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/spj-code-of-ethics-search.jpg" alt="Google AI Overview summarizing the SPJ Code of Ethics and its four core principles" width="2048" height="1020" loading="lazy" decoding="async"><figcaption>The SPJ Code of Ethics.</figcaption></figure>
-<p>By utilizing AI to write all of their articles and not disclosing it, dot.LA is failing to properly maintain <a href="https://en.wikipedia.org/wiki/Code_of_ethics_in_media" rel="noopener">accuracy, attribution, accountability, and transparency in its reporting</a>.</p>
-<h2>Who Is Grace Lee at dot.LA?</h2>
-<p>Grace Lee, as described on her <a href="https://muckrack.com/grace-lee-78" rel="noopener">MuckRack</a> and <a href="https://www.linkedin.com/in/glee-me/" rel="noopener">LinkedIn</a> accounts, is a Senior Product Designer in San Francisco who works for dot.LA. She is not a journalist. Which leads to the question: Why is a news organization’s entire publication of articles written by a Senior Product Designer? The answer is to save costs and mislead their audience.</p>
-<p>Below is an expert from Grace Lee’s personal website:</p>
+<h2>Who writes dot.LA’s articles now?</h2>
+<p>The recent articles I reviewed on dot.LA’s site are bylined <a href="https://dot.la/rainmaker-raises-100m-solve-weather-2677939101.html" rel="noopener">Grace Lee</a>. Her <a href="https://muckrack.com/grace-lee-78" rel="noopener">Muck Rack</a> and <a href="https://www.linkedin.com/in/glee-me/" rel="noopener">LinkedIn</a> profiles describe her as a Senior Product Designer in San Francisco. Neither profile describes her as a reporter or an editor.</p>
+<p>This is the About section of her personal website:</p>
 <figure class="fig shot"><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/grace-lee-personal-website-about.jpg" alt="About section of Grace Lee's personal website describing her as a product partner" width="2048" height="814" loading="lazy" decoding="async"><figcaption>From Grace Lee’s personal website.</figcaption></figure>
-<p>Does this sound remotely close to a journalist? Why is dot.LA using Product Designers to author their articles?</p>
-<h2>Is dot.LA using AI to write all of their articles?</h2>
-<p>Yes. Put any recent dot.LA article into ChatGPT and ask what percentage of the article is written by a human. ChatGPT will most likely say that less than 20% of the entire article is even written by a human. dot.LA did this to save costs on paying employees.</p>
+<p>Does that sound like a journalist? Why is a news site putting a product designer’s byline on its news stories? dot.LA has not explained it. My guess is that it’s cheaper than paying reporters. Readers deserve a straight answer.</p>
+<h2>Is dot.LA using AI to write its articles?</h2>
+<p>I think so, and dot.LA has never said otherwise. None of the articles I reviewed carry any disclosure about AI use.</p>
+<p>I asked ChatGPT to assess recent articles bylined Grace Lee. On September 27, 2026, it estimated an 85–95% chance that AI was materially involved in drafting them, and that 50–80% of the first-draft prose likely came from AI. AI detection isn’t proof, and ChatGPT called its own number a subjective estimate. But try it yourself with any recent dot.LA article. I think you’ll come away with the same question I did.</p>
 <figure class="fig shot"><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/chatgpt-dot-la-ai-estimate.jpg" alt="ChatGPT response estimating AI involvement in recent Grace Lee articles" width="2048" height="251" loading="lazy" decoding="async"><figcaption>ChatGPT, September 27, 2026.</figcaption></figure>
-<p>ChatGPT, on September 27th at 9:45 AM, estimated that 80–95% of all dot.LA articles were written by AI. This is extremely concerning.</p>
-<h2>Has dot.LA been reported for unethical journalism tactics?</h2>
-<p>Yes. Josh Popkin is currently talking with Reuters, the Society of Professional Ethics, and other major news outlets to expose the unethical practices of dot.LA.</p>
+<h2>Does dot.LA meet the journalism code of ethics?</h2>
+<p>In my opinion, no. The <a href="https://www.spj.org/" rel="noopener">SPJ Code of Ethics</a>, written by the Society of Professional Journalists, asks journalists to seek truth and report it, to act independently, and to be accountable and transparent with readers.</p>
+<figure class="fig shot"><img src="https://joshpopkin.com/images/dot-la-is-a-fake-news-room/spj-code-of-ethics-search.jpg" alt="Google AI Overview summarizing the SPJ Code of Ethics and its four core principles" width="2048" height="1020" loading="lazy" decoding="async"><figcaption>The SPJ Code of Ethics.</figcaption></figure>
+<p>A site that fired its newsroom, runs news under a product designer’s byline, and says nothing about AI isn’t being transparent with its readers. When a publication won’t tell readers who is writing its stories or how they are written, it has stopped acting like a newsroom. That’s why I call dot.LA a fake newsroom.</p>
+<h2>What should dot.LA do?</h2>
+<p>Answer two questions publicly:</p>
+<ol>
+<li>Who reports and writes dot.LA’s articles today?</li>
+<li>Is AI used to write them, and if so, how much?</li>
+</ol>
+<p>dot.LA is welcome to respond. I will publish its answer here in full.</p>
 ]]></content:encoded>
   </item>
   <item>
