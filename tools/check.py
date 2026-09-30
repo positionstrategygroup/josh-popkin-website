@@ -50,7 +50,7 @@ def asset(ref):
         except Exception:
             return False, None, 0
     else:
-        f = ref.lstrip("/")
+        f = ref.lstrip("/").split("?", 1)[0]
         if not os.path.exists(f): return False, None, 0
         d = open(f, "rb").read()
     try:
