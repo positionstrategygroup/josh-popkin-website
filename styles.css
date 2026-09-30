@@ -33,7 +33,7 @@ img{max-width:100%;height:auto;display:block}
 main{max-width:var(--wide);margin:0 auto;padding:clamp(40px,6vh,72px) var(--pad) clamp(70px,10vh,120px)}
 
 /* cards */
-.card{display:grid;gap:22px 40px;padding:28px 0;border-top:1px solid var(--hair);position:relative}
+.card{display:grid;align-content:start;gap:22px 40px;padding:28px 0;border-top:1px solid var(--hair);position:relative}
 .card .pic{overflow:hidden;background:var(--paper)}
 .card .pic img{aspect-ratio:3/2;object-fit:cover;object-position:50% 12%;width:100%;transition:transform 1.4s var(--ease)}
 .card.lead .pic img{aspect-ratio:auto;object-fit:contain}
