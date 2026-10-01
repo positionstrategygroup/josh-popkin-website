@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-09-30</lastmod>
 
   </url>
   <url>
@@ -15,6 +15,11 @@
     <lastmod>2026-09-19</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin, New York</image:caption></image:image>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026-square.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/how-profound-turns-ai-search-visibility-into-action/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <image:image><image:loc>https://joshpopkin.com/images/how-profound-turns-ai-search-visibility-into-action/how-profound-turns-ai-search-visibility-into-action-card.jpg</image:loc><image:caption>Josh Popkin.</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/profound-vs-peec-ai-new-york-events/</loc>
