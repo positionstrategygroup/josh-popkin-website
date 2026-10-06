@@ -152,3 +152,7 @@ figcaption .credit{font-family:var(--m);font-size:10px;letter-spacing:.12em;text
 .agency h1+p{margin-top:26px}
 .profile{padding-top:clamp(40px,6vh,64px);border-top:3px solid var(--ink)}
 .profile .h1{font-family:var(--s);font-variation-settings:'opsz' 48;font-weight:500;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.02em;line-height:1.05;margin-top:12px}
+
+/* homepage masthead: the site name is the page's H1 */
+.mast h1.name{margin-bottom:0}
+.mast h1.name a{color:inherit;text-decoration:none}
