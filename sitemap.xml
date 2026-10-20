@@ -2,13 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-20</lastmod>
 
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/josh-popkin-wins-against-dot-la/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <image:image><image:loc>https://joshpopkin.com/images/josh-popkin-wins-against-dot-la/josh-popkin-wins-against-dot-la-card.jpg</image:loc><image:caption>Josh Popkin on the Cornell Tech roof, Roosevelt Island. dot.LA confirmed on October 7, 2026, that its article about him had been taken down.</image:caption></image:image>
+    <image:image><image:loc>https://joshpopkin.com/images/josh-popkin-wins-against-dot-la/dot-la-ceo-hailey-chang-confirms-article-removed.png</image:loc><image:caption>Hailey Chang of dot.LA confirms the article about Josh Popkin has been taken down, October 7, 2026.</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/business-insider-removes-josh-popkin-photo-copyright-claim/</loc>
