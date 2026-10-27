@@ -2,13 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-27</lastmod>
 
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/fast-company-failed-to-provide-evidence-josh-popkin/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <image:image><image:loc>https://joshpopkin.com/images/fast-company-failed-to-provide-evidence-josh-popkin/josh-popkin-headshot-josh-paul-popkin-fast-company-2026.jpg</image:loc><image:title>Josh Popkin headshot (Josh Paul Popkin)</image:title><image:caption>Josh Popkin in New York City. On October 8, 2026, he asked Fast Company to retract its December 2022 article about him or provide the evidence behind it.</image:caption></image:image>
+    <image:image><image:loc>https://joshpopkin.com/images/fast-company-failed-to-provide-evidence-josh-popkin/josh-popkin-letter-to-fast-company-october-8-2026-page-1.png</image:loc><image:caption>Josh Popkin’s October 8, 2026 correspondence to Fast Company and Mansueto Ventures requesting a retraction or evidence substantiating the article’s claims. Email addresses blurred.</image:caption></image:image>
+    <image:image><image:loc>https://joshpopkin.com/images/fast-company-failed-to-provide-evidence-josh-popkin/fast-company-rhea-siegel-reply-to-josh-popkin-october-8-2026.png</image:loc><image:caption>Response from Rhea Siegel regarding Josh Popkin’s request that Fast Company review and substantiate the disputed article.</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/josh-popkin-wins-against-dot-la/</loc>
