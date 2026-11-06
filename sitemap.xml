@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://joshpopkin.com/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <image:image><image:loc>https://joshpopkin.com/josh-popkin-headshot-2026.jpg</image:loc><image:caption>Josh Popkin</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
 
+  </url>
+  <url>
+    <loc>https://joshpopkin.com/insights/another-victory-for-josh-popkin-paper-magazine/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <image:image><image:loc>https://joshpopkin.com/images/another-victory-for-josh-popkin-paper-magazine/josh-popkin-headshot-josh-paul-popkin-paper-magazine-nov-2026.jpg</image:loc><image:title>Josh Popkin headshot (Josh Paul Popkin)</image:title><image:caption>Josh Popkin. PAPER Magazine confirmed on November 5, 2026, that an image of him had been removed.</image:caption></image:image>
   </url>
   <url>
     <loc>https://joshpopkin.com/insights/josh-popkin-helps-annie-seifullah-gothamist-articles-removed/</loc>
